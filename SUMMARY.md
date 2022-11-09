@@ -30,10 +30,19 @@
 
 * [WFUZZ](工具/wfuzz.md)
 * [AWS](工具/aws.md)
-* [字典](工具/zi-dian.md)
 * [CURL](工具/curl.md)
 * [gobuster](工具/gobuster.md)
+* [John](工具/john.md)
+* [字典](工具/zi-dian.md)
+* [nmap](工具/nmap.md)
+* [FFUF](工具/ffuf.md)
+* [sqlmap](工具/sqlmap.md)
+* [smbClient](工具/smbclient.md)
+* [Hydra](工具/hydra.md)
+* [Hashcat](工具/hashcat.md)
+* [nikto](工具/nikto.md)
 
 ## 💻 服务 <a href="#服务" id="服务"></a>
 
 * [SMB](服务/smb.md)
+* [SSH](服务/ssh.md)

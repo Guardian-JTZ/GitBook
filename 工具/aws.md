@@ -6,6 +6,7 @@
 
 ## 2. aws-cli
 
+{% code overflow="wrap" %}
 ```shell
 # 查看版本
 aws --version
@@ -17,9 +18,11 @@ AWS Secret Access Key [None]: k+ci5r+hAcM3x61w1example
 Default region name [None]: ap-east-1
 Default output format [None]: json
 ```
+{% endcode %}
 
 ### 1. EC2
 
+{% code overflow="wrap" %}
 ```shell
 #修改实例类型,先stop
 aws ec2 stop-instances --instance-ids i-1234567890abcdef0
@@ -44,9 +47,11 @@ vol-abcd1234
 ##再创建snapshot 
 aws ec2 create-snapshot --volume-id vol-abcd1234 --tag-specifications "ResourceType=snapshot,Tags=[{Key=Name,Value=webserver}]" 
 ```
+{% endcode %}
 
 ### 2. ELB
 
+{% code overflow="wrap" %}
 ```shell
 ##ELB描述
 aws elb describe-load-balancers --load-balancer-name WebELB
@@ -65,6 +70,7 @@ aws elbv2 deregister-targets --target-group-arn arn:aws:elasticloadbalancing:us-
 ##注册实例到ALB目标群组
 aws elbv2 register-targets --target-group-arn arn:aws:elasticloadbalancing:us-east-1:123456789101:targetgroup/TestALB/abcdef12345abcde --targets Id=i-abcd1234
 ```
+{% endcode %}
 
 ### 3. S3
 
