@@ -10,7 +10,54 @@
 * 两种模式：
   * 主动模式： 要求客户端和服务器端同时打开并监听一个端口以创建连接
   * 被动模式： 服务端产生一个监听相应端口的进程
-  *
+* [FTP 命令列表](https://www.smartfile.com/blog/the-ultimate-ftp-commands-list/)
+* [FTP 服务器返回状态码](https://en.wikipedia.org/wiki/List\_of\_FTP\_server\_return\_codes)
+
+## 应用
+
+### 1. vsFTPd
+
+> 基于 Linux 发行版的常用 FTP 服务器之一， vsFTPd 的默认配置位与 /etc/vsftpd.conf
+>
+> [vsFtpd 的配置手册](http://vsftpd.beasts.org/vsftpd\_conf.html)
+
+```shell
+# 一些危险的配置
+anonymous_enable=YES  # 允许匿名登录
+anon_upload_enable=YES  # 允许匿名上传文件
+anon_mkdir_write_enable=YES  # 允许匿名创建新目录
+no_anon_password=YES  # 不要匿名询问密码
+anon_root=/home/username/ftp  # 匿名目录
+write_enable=YES  # 允许使用 FTP 命令：STOR、DELE、RNFR、RNTO、MKD、RMD、APPE 和 SITE
+
+
+# 获取服务器的一些概览设置
+ftp> status # 获取 vsFTPd 的状态
+ftp> debug
+ftp> trace
+```
+
+## 工具使用
+
+### 1. FTP
+
+```shell
+# 在本机执行，下载所有可用文件
+wget -m --no-passive ftp://anonymous:anonymous@10.129.14.136
+# 连接 FTP 服务器
+FTP IP-address
+
+# 下载文件
+get [remote-file] [local-file] # 下载单个文件
+mget [remote-files] # 下载多个文件
+
+# 上传文件
+put local-file [remote-file]  # 上传单个文件
+mput lical-files  # 上传多个文件
+
+# 断开连接
+byte
+```
 
 ## 安全问题
 
