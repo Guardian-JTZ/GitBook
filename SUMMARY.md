@@ -23,7 +23,7 @@
   * [ICMP](计算机网络/xie-yi-pian/icmp.md)
   * [TLS/SSL](计算机网络/xie-yi-pian/tls-ssl.md)
 
-## 工具 <a href="#工具" id="工具"></a>
+## 工具
 
 * [WFUZZ](工具/wfuzz.md)
 * [AWS](工具/aws.md)
@@ -67,7 +67,7 @@
 * [Windows](操作系统/windows.md)
 * [Linux](操作系统/linux.md)
 
-## HTB 靶场 <a href="#HTB 靶场" id="HTB 靶场"></a>
+## HTB 靶场
 
 * [⌚ 路径](<HTB 靶场/路径.md>)
 * [Jerry](<HTB 靶场/jerry.md>)
