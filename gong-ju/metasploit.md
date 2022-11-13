@@ -4,6 +4,8 @@
 
 ## 使用框架结构
 
+<figure><img src="../.gitbook/assets/20221021181843.png" alt=""><figcaption></figcaption></figure>
+
 ## 一、 介绍
 
 ### 1. 体系框架
@@ -156,9 +158,11 @@ lsa_dump_secrets
 
 1. conect 命令： connect 的命令主要用于远程连接主机，一般用于内网渗透
 
+<figure><img src="../.gitbook/assets/20220806160049.png" alt=""><figcaption></figcaption></figure>
+
 ### 2. 模块命令
 
->
+<figure><img src="../.gitbook/assets/20220806174757.png" alt=""><figcaption></figcaption></figure>
 
 ## 六、信息收集
 
