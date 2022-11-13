@@ -4,6 +4,8 @@
 
 ## 使用框架结构
 
+<figure><img src="../.gitbook/assets/20221021181843.png" alt=""><figcaption></figcaption></figure>
+
 ## 一、 介绍
 
 ### 1. 体系框架
@@ -156,9 +158,13 @@ lsa_dump_secrets
 
 1. conect 命令： connect 的命令主要用于远程连接主机，一般用于内网渗透
 
+<figure><img src="../.gitbook/assets/20220806160049.png" alt=""><figcaption></figcaption></figure>
+
 ### 2. 模块命令
 
->
+<figure><img src="../.gitbook/assets/20220806174757.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/20220806174919.png" alt=""><figcaption></figcaption></figure>
 
 ## 六、信息收集
 
@@ -254,7 +260,10 @@ use auxiliary/scanner/ftp/ftp_login  # 设置指定模块
 
 ## 七、实战
 
-攻击流程：
+攻击流程：\
+
+
+<figure><img src="../.gitbook/assets/20220807202421.png" alt=""><figcaption></figcaption></figure>
 
 ### 1. 使用永恒之蓝攻击 win7
 
@@ -322,7 +331,8 @@ services  # 所有的目标在当前数据库中的服务信息
 > msfvenom 是 msfpayload msfencode 的2结合体，可以利用 msfvenom 生成木马程序，并在目标机上执行，在本地监听
 
 1. 目标： 使用 msfvenon 生成快播和西瓜影音看片神奇后门木马
-2. 流程：
+2. 流程：\
+   ![](../.gitbook/assets/20220808102329.png)
 3.  生成后门程序
 
     ```shell
