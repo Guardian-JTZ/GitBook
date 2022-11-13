@@ -48,6 +48,7 @@
 * [Rsync](工具/rsync.md)
 * [ssh-audit](工具/ssh-audit.md)
 * [evil-winrm](工具/evil-winrm.md)
+* [Metasploit](gong-ju/metasploit.md)
 
 ## 💻 服务
 
@@ -65,3 +66,10 @@
 
 * [Windows](操作系统/windows.md)
 * [Linux](操作系统/linux.md)
+
+## HTB 靶场 <a href="#HTB 靶场" id="HTB 靶场"></a>
+
+* [⌚ 路径](<HTB 靶场/路径.md>)
+* [Jerry](<HTB 靶场/jerry.md>)
+* [Lame](<HTB 靶场/lame.md>)
+* [Netmon](<HTB 靶场/netmon.md>)
