@@ -7,6 +7,7 @@
 ## 📓 日记 <a href="#日记" id="日记"></a>
 
 * [😀 2022-11-4](日记/2022-11-4.md)
+* [😀 2022-11-13](日记/2022-11-13.md)
 
 ## 计算机网络 <a href="#计算机网络" id="计算机网络"></a>
 
@@ -44,11 +45,23 @@
 * [smbmap](工具/smbmap.md)
 * [Docker](工具/docker.md)
 * [crackmapexec](工具/crackmapexec.md)
+* [Rsync](工具/rsync.md)
+* [ssh-audit](工具/ssh-audit.md)
+* [evil-winrm](工具/evil-winrm.md)
 
 ## 💻 服务 <a href="#服务" id="服务"></a>
 
 * [SSH](服务/ssh.md)
-* [NFS](服务/nfs.md)
 * [FTP](服务/ftp.md)
-* [SMB](服务/smb.md)
+* [NFS](服务/nfs.md)
 * [DNS](服务/dns.md)
+* [SMB](服务/smb.md)
+* [WInRM](服务/winrm.md)
+* [RDP](服务/rdp.md)
+* [SNMP](服务/snmp.md)
+* [WMI](服务/wmi.md)
+
+## 🖥 操作系统 <a href="#操作系统" id="操作系统"></a>
+
+* [Windows](操作系统/windows.md)
+* [Linux](操作系统/linux.md)
