@@ -73,3 +73,8 @@
 * [Jerry](<HTB 靶场/jerry.md>)
 * [Lame](<HTB 靶场/lame.md>)
 * [Netmon](<HTB 靶场/netmon.md>)
+
+## 🕶 HTB 学院 <a href="#HTB 学院" id="HTB 学院"></a>
+
+* [Payloads](<HTB 学院/payloads.md>)
+* [文件传输](<HTB 学院/wen-jian-chuan-shu.md>)

