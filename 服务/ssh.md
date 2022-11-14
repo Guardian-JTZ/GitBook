@@ -1,3 +1,7 @@
+---
+layout: editorial
+---
+
 # SSH
 
 \[TOC]
