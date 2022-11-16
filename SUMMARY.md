@@ -45,12 +45,13 @@
 * [smbmap](工具/smbmap.md)
 * [Docker](工具/docker.md)
 * [crackmapexec](工具/crackmapexec.md)
+* [Evil-WinRM](gong-ju/evil-winrm.md)
 * [Rsync](工具/rsync.md)
 * [ssh-audit](工具/ssh-audit.md)
-* [evil-winrm](工具/evil-winrm.md)
+* [evil-winrm](gong-ju/evil-winrm-1.md)
 * [Metasploit](工具/metasploit.md)
 
-## 💻 服务
+## 💻 服务 <a href="#服务" id="服务"></a>
 
 * [SSH](服务/ssh.md)
 * [FTP](服务/ftp.md)
@@ -76,5 +77,6 @@
 
 ## 🕶 HTB 学院 <a href="#HTB 学院" id="HTB 学院"></a>
 
-* [Payloads](<HTB 学院/payloads.md>)
+* [SHELLS\&Payloads](<HTB 学院/shells-and-payloads.md>)
 * [文件传输](<HTB 学院/wen-jian-chuan-shu.md>)
+* [密码攻击](<HTB 学院/mi-ma-gong-ji.md>)
