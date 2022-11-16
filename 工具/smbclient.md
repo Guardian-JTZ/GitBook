@@ -57,4 +57,9 @@ smbclient --help
 ```shell
 # 展示某个 IP 地址提供的共享文件夹
 smclient -L IP -U username%password
+
+# 使用 SMB 下载文件夹， C 是要下载的文件夹名称
+smb: \testdir\> prompt
+smb: \testdir\> recurse
+smb: \testdir\> mget C
 ```
