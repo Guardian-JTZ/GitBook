@@ -6,16 +6,18 @@ description: 破解密码
 
 ## Hashid
 
-> 检测各种哈希值
+> 识别各种哈希值
 >
 > * 哈希类型与其对应的编号---> [网页跳转](https://hashcat.net/wiki/doku.php?id=example\_hashes)
 
 ```shell
 # hashes.txt 是一个存储哈希值的文本文件
-hashid hashes.txt 
+hashid hashes.txt
 ```
 
 ## Hashcat
+
+官网--> [hashcat](https://hashcat.net/hashcat/)
 
 ### 生成基于规则的词表
 
@@ -25,7 +27,7 @@ hashid hashes.txt
 hashcat --force password.list -r custom.rule --stdout | sort -u > mut_password.list
 ```
 
-
+### 基本使用
 
 <pre class="language-shell"><code class="lang-shell"><strong># Hashcat 语法
 </strong>hashcat -a &#x3C;type> -m &#x3C;hash type> &#x3C;hash file> &#x3C;wordlist>
@@ -58,3 +60,21 @@ hashcat -m 100 SHA1_hashes ./rockyou.txt</code></pre>
 | ?s  | 特殊字符 («空格»!"#$%\&amp;'()\*+,-./:;\&lt;=\&gt; ?@ \[]^\_\`{ |
 | ?a  | ?l?u?d?s                                                  |
 | ?b  | 0x00 - 0xff                                               |
+
+1. 以前破解的密码: \
+   默认情况下，hashcat 会将所有破解的密码存储在 hashcat.potfile 文件中，格式： hash:password ,可以使用 --show 命令显示所有破解的密码
+
+### 破解常见哈希
+
+```bash
+# 1. 破解 Linux shadow 文件  SHA-512
+hashcat -m 1800 nix_hash /opt/useful/SecLists/Passwords/Leaked-Databases/rockyou.txt
+
+# 2. 破解 NTLM  哈希
+hashcat -a 0 -m 1000 ntlm_example /opt/useful/SecLists/Passwords/Leaked-Databases/rockyou.txt
+# 3. 破解 NTLMV2 哈希
+hashcat -a 0 -m 5600 inlanefreight_ntlmv2 /opt/useful/SecLists/Passwords/Leaked-Databases/rockyou.txt
+```
+
+### 使用 Hashcat 破解无线 (WPA/WPA2) 握手
+

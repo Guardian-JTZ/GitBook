@@ -25,6 +25,7 @@
 
 ## 工具
 
+* [CEWL](gong-ju/cewl.md)
 * [WFUZZ](工具/wfuzz.md)
 * [AWS](工具/aws.md)
 * [CURL](工具/curl.md)
@@ -36,7 +37,8 @@
 * [sqlmap](工具/sqlmap.md)
 * [smbClient](工具/smbclient.md)
 * [Hydra](工具/hydra.md)
-* [Hashcat](工具/hashcat.md)
+* [Hashcat](gong-ju/hashcat/README.md)
+  * [使用 Hashcat 破解无线 (WPA/WPA2) 握手](gong-ju/hashcat/shi-yong-hashcat-po-jie-wu-xian-wpawpa2-wo-shou.md)
 * [nikto](工具/nikto.md)
 * [dig](工具/dig.md)
 * [搜索器语法](工具/sou-suo-qi-yu-fa.md)

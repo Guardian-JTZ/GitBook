@@ -1,6 +1,16 @@
+---
+description: 密码破解
+---
+
 # John
 
-\[TOC]
+
+
+```bash
+sudo git clone https://github.com/magnumripper/JohnTheRipper.git
+cd JohnTheRipper/src
+sudo ./configure && make
+```
 
 ## 1. 破解密码保护的 Office 的文档
 
