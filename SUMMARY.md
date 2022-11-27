@@ -25,6 +25,7 @@
 
 ## 工具
 
+* [脚本工具包](gong-ju/jiao-ben-gong-ju-bao.md)
 * [CEWL](gong-ju/cewl.md)
 * [WFUZZ](工具/wfuzz.md)
 * [AWS](工具/aws.md)
@@ -51,6 +52,9 @@
 * [Rsync](工具/rsync.md)
 * [ssh-audit](工具/ssh-audit.md)
 * [evil-winrm](gong-ju/evil-winrm-1.md)
+* [😀 Kerbrute](gong-ju/kerbrute.md)
+* [😁 DomainPasswordSpray](gong-ju/domainpasswordspray.md)
+* [⌚ ACTIVE DIRECTORY 枚举和攻击 -- 工具](gong-ju/active-directory-mei-ju-he-gong-ji-gong-ju.md)
 * [Metasploit](工具/metasploit.md)
 
 ## 💻 服务 <a href="#服务" id="服务"></a>
