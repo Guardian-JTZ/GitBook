@@ -81,4 +81,7 @@
 
 * [SHELLS\&Payloads](<HTB 学院/shells-and-payloads.md>)
 * [文件传输](<HTB 学院/wen-jian-chuan-shu.md>)
+* [足迹](<HTB 学院/zu-ji.md>)
+* [信息收集](<HTB 学院/xin-xi-shou-ji.md>)
+* [Pivoting &隧道和端口转发](<HTB 学院/pivoting-sui-dao-he-duan-kou-zhuan-fa.md>)
 * [密码攻击](<HTB 学院/mi-ma-gong-ji.md>)
