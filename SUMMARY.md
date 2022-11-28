@@ -54,7 +54,8 @@
 * [evil-winrm](gong-ju/evil-winrm-1.md)
 * [😀 Kerbrute](gong-ju/kerbrute.md)
 * [😁 DomainPasswordSpray](gong-ju/domainpasswordspray.md)
-* [⌚ ACTIVE DIRECTORY 枚举和攻击 -- 工具](gong-ju/active-directory-mei-ju-he-gong-ji-gong-ju.md)
+* [⌚ AD 枚举和攻击 -- 工具](gong-ju/ad-mei-ju-he-gong-ji-gong-ju.md)
+* [🦯 Windows 权限提升工具](gong-ju/windows-quan-xian-ti-sheng-gong-ju.md)
 * [Metasploit](工具/metasploit.md)
   * [🚲 msfvenom](gong-ju/metasploit/msfvenom.md)
 
