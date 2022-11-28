@@ -44,6 +44,13 @@ magic script = script.sh  # 当脚本关闭时应该执行哪个脚本
 magic output = script.out  # 魔术脚本的输出需要存储在哪里
 ```
 
+### 2. 开启 SMB 服务
+
+```bash
+# 1. smbserver.py
+python3 smbserver.py share 共享目录
+```
+
 ## 工具使用
 
 ### 1. [smbclient](../工具/smbclient.md)
