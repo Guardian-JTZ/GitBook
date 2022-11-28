@@ -55,7 +55,7 @@
 * [😀 Kerbrute](gong-ju/kerbrute.md)
 * [😁 DomainPasswordSpray](gong-ju/domainpasswordspray.md)
 * [⌚ ACTIVE DIRECTORY 枚举和攻击 -- 工具](gong-ju/active-directory-mei-ju-he-gong-ji-gong-ju.md)
-* [Metasploit](gong-ju/metasploit/README.md)
+* [Metasploit](工具/metasploit.md)
   * [🚲 msfvenom](gong-ju/metasploit/msfvenom.md)
 
 ## 💻 服务 <a href="#服务" id="服务"></a>
