@@ -56,6 +56,7 @@
 * [😁 DomainPasswordSpray](gong-ju/domainpasswordspray.md)
 * [⌚ AD 枚举和攻击 -- 工具](gong-ju/ad-mei-ju-he-gong-ji-gong-ju.md)
 * [🦯 Windows 权限提升工具](gong-ju/windows-quan-xian-ti-sheng-gong-ju.md)
+* [📱 Pspy](gong-ju/pspy.md)
 * [Metasploit](工具/metasploit.md)
   * [🚲 msfvenom](gong-ju/metasploit/msfvenom.md)
 
