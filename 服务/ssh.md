@@ -1,16 +1,15 @@
 ---
+description: 这是讲解关于 SSH 服务的一些信息
 layout: editorial
 ---
 
 # SSH
 
-
-
-## 介绍
+## 前言： SSH介绍
 
 > SSH 是一种网络协议，用于计算机之间的加密登陆
 
-### 中间人攻击
+### 一、中间人攻击
 
 SSH 的使用过程：
 
@@ -19,6 +18,23 @@ SSH 的使用过程：
 3. 远程主机使用自己的私钥，解密登陆密码，如果密码正确，就同意用户登录
 
 > 如果在实施过程中，有人截获了登录请求，然后冒充远程主机，将伪造的公钥发送给用户，用户无法辨别真伪，当用户发送了密码后，攻击者就可以得到登录密码
+
+### 二、 SSH 文件结构
+
+1.  id\_rsa
+
+    这是 SSH 的私钥，与公钥是一堆的密钥对，用于连接其他服务器使用
+2.  id\_rsa.pub
+
+    这是 SSH 的公钥，将 A 主机的 id\_rsa.pub 文件拷贝到 B 主机的 authorized\_keys 文件中，这样 A 主机就可能不通过密码连接 B 主机
+3.  authorized\_keys (授权文件)
+
+    实现真正无密码连接，即为授权文件，当把master的公钥添加到 authorized\_keys 文件中后，下次连接直接输入ssh master即可，不需要再次输入密码
+
+    1. 单向：将 A 主机的 id\_rsa.pub 文件拷贝到 B 主机的 authorized\_keys 就可以使 A 无密码连接 B 主机
+    2. 双向：将 A、B 主机的 id\_rsa.pub  文件都写入彼此 authorized\_keys 中就可以实现双向登录
+4. known\_hosts\
+   ssh会把你每个你访问过计算机的公钥(public key)都记录在\~/.ssh/known\_hosts。当下次访问相同计算机时，OpenSSH会核对公钥。如果公钥不同，OpenSSH会发出警告， 避免你受到DNS Hijack之类的攻击。
 
 ## 一、基本用法
 
