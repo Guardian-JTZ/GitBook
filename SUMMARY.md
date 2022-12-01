@@ -94,3 +94,4 @@
 * [信息收集](<HTB 学院/xin-xi-shou-ji.md>)
 * [Pivoting &隧道和端口转发](<HTB 学院/pivoting-sui-dao-he-duan-kou-zhuan-fa.md>)
 * [密码攻击](<HTB 学院/mi-ma-gong-ji.md>)
+* [Linux 提权](<HTB 学院/linux-ti-quan.md>)
