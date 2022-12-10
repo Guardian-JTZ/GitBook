@@ -1,9 +1,5 @@
 # crackmapexec
 
-
-
->
-
 ```shell
 # crackmapexec  菜单选项
 crackmapexec -h

@@ -53,11 +53,11 @@ python3 smbserver.py share 共享目录
 
 ## 工具使用
 
-### 1. [smbclient](../../工具/smbclient.md)
+### 1. [smbclient](../../gong-ju/服务/139-445-smb/smbclient.md)
 
-### 2.[ rpcclient](../../工具/rpcclient.md)
+### 2.[ rpcclient](../../gong-ju/服务/139-445-smb/rpcclient.md)
 
-### 3. [smbmap](../../工具/smbmap.md)
+### 3. [smbmap](../../gong-ju/服务/139-445-smb/smbmap.md)
 
 ### 4. [crackmapexec](../../工具/crackmapexec.md)
 
