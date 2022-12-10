@@ -53,12 +53,12 @@ python3 smbserver.py share 共享目录
 
 ## 工具使用
 
-### 1. [smbclient](../工具/smbclient.md)
+### 1. [smbclient](../../工具/smbclient.md)
 
-### 2.[ rpcclient](../工具/rpcclient.md)
+### 2.[ rpcclient](../../工具/rpcclient.md)
 
-### 3. [smbmap](../工具/smbmap.md)
+### 3. [smbmap](../../工具/smbmap.md)
 
-### 4. [crackmapexec](../工具/crackmapexec.md)
+### 4. [crackmapexec](../../工具/crackmapexec.md)
 
-### 5. [enum4linux-ng](../工具/enum4linux-ng.md)
+### 5. [enum4linux-ng](../../工具/enum4linux-ng.md)
