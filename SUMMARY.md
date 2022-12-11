@@ -75,6 +75,8 @@
 * [渗透框架工具](gong-ju/渗透框架工具/README.md)
   * [Metasploit](gong-ju/渗透框架工具/metasploit/README.md)
     * [🚲 msfvenom](gong-ju/渗透框架工具/metasploit/msfvenom.md)
+* [文件](gong-ju/文件/README.md)
+  * [Exiftool](gong-ju/文件/exiftool.md)
 * [搜索器语法](工具/sou-suo-qi-yu-fa.md)
 * [enum4linux-ng](工具/enum4linux-ng.md)
 * [Docker](工具/docker.md)
