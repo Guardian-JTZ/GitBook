@@ -1,3 +1,0 @@
-# sqlmap
-
-\[TOC]

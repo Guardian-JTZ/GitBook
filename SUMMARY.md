@@ -41,7 +41,7 @@
   * [CEWL](gong-ju/字典/cewl.md)
 * [自动化扫描工具](gong-ju/自动化扫描工具/README.md)
   * [nikto](gong-ju/自动化扫描工具/nikto.md)
-  * [sqlmap](gong-ju/自动化扫描工具/sqlmap.md)
+  * [SQLMAP](工具/自动化扫描工具/sqlmap.md)
 * [密码&解密](gong-ju/密码&解密/README.md)
   * [识别 Hash](<工具/密码&解密/识别 Hash/README.md>)
     * [hash-identifier](<工具/密码&解密/识别 Hash/hash-identifier.md>)
