@@ -48,7 +48,8 @@ hashcat -a 6 -m 0 ./rockyou.txt '?d?s'
 hashcat -a 7 -m 0 hybrid_hash_prefix -1 01 '20?1?d' ./rockyou.txt
 
 # 破解哈希
-hashcat -m 100 SHA1_hashes ./rockyou.txt</code></pre>
+hashcat -m 100 SHA1_hashes ./rockyou.txt
+</code></pre>
 
 | 占位符 | 意义                                                        |
 | --- | --------------------------------------------------------- |

