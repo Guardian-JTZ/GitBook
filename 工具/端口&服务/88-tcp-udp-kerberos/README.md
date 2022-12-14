@@ -8,3 +8,7 @@
 4. 凭据填充/暴力破解 ： 自动持续尝试猜测密码
 5. Encryption downgrade with Skeleton Key Malware：一种可以绕过Kerberos的恶意软件，但攻击必须有管理员权限
 6. DCShadow 攻击：一种新的攻击方式，攻击者在网络中获得足够的访问权限来设置自己的 DC 以用于进一步渗透
+
+## 参考文章
+
+1. [windows-protocol](https://daiker.gitbook.io/windows-protocol/)
