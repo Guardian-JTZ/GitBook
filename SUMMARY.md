@@ -69,6 +69,8 @@
       * [WFUZZ](<工具/端口&服务/80&443 -- WEB 服务/sao-miao-gong-ju/wfuzz.md>)
       * [gobuster](<工具/端口&服务/80&443 -- WEB 服务/sao-miao-gong-ju/gobuster.md>)
       * [FFUF](<工具/端口&服务/80&443 -- WEB 服务/sao-miao-gong-ju/ffuf.md>)
+  * [88 tcp/udp -- Kerberos](工具/端口&服务/88-tcp-udp-kerberos/README.md)
+    * [Kerberos--介绍](工具/端口&服务/88-tcp-udp-kerberos/kerberos-jie-shao.md)
   * [139/445 -- SMB](<工具/端口&服务/139&445 -- SMB/README.md>)
     * [smbClient](<工具/端口&服务/139&445 -- SMB/smbclient.md>)
     * [smbmap](<工具/端口&服务/139&445 -- SMB/smbmap.md>)
