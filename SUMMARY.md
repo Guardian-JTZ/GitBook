@@ -26,6 +26,8 @@
 * [🔧 Windows](计算机网络/windows/README.md)
   * [Windows](计算机网络/windows/windows.md)
 * [🔧 Linux](计算机网络/linux/README.md)
+  * [工具推荐](计算机网络/linux/gong-ju-tui-jian/README.md)
+    * [WindTerm](计算机网络/linux/gong-ju-tui-jian/windterm.md)
   * [Linux](计算机网络/linux/linux.md)
 
 ## 工具 <a href="#工具" id="工具"></a>
