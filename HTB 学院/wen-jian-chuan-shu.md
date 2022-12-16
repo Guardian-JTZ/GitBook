@@ -164,7 +164,7 @@ cat <&3
 
 ### 5. SSH 下载
 
-> 详见 SSH 服务篇 --> [跳转链接](../计算机网络/端口&协议/ssh.md#2.-scp-kua-ji-yuan-cheng-kao-bei)
+> 详见 SSH 服务篇 --> [跳转链接](../权限提升/协议/ssh.md#2.-scp-kua-ji-yuan-cheng-kao-bei)
 
 ### 6. 网页上传
 
