@@ -1,7 +1,5 @@
 # Docker
 
-\[TOC]
-
 ## 1. 使用 Docker 安装软件
 
 1. [Docker 官方镜像仓库查找](https://hub.docker.com/)
