@@ -1,5 +1,7 @@
 # 88 tcp/udp -- Kerberos
 
+Kerberos 介绍 -->[Kerberos 介绍.md](<../../../计算机网络/端口&协议/Kerberos 介绍.md> "mention")
+
 ## 攻击漏洞方法
 
 1. Pass\_the\_ticket : 伪造会话密钥并将该伪造作为凭证提供给资源的过程

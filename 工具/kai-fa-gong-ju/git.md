@@ -1,6 +1,6 @@
 # Git
 
-<figure><img src="../.gitbook/assets/Git.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Git.png" alt=""><figcaption></figcaption></figure>
 
 > * Workspace：工作区
 > * Index / Stage：暂存区
