@@ -1,14 +1,14 @@
 # Table of contents
 
-## 启航 <a href="#启航" id="启航"></a>
+## 启航
 
 * [💻 介绍](README.md)
-* [🚀 路径以及总结](<README (1).md>)
+* [🚀 路径以及总结](qi-hang/lu-jing-yi-ji-zong-jie.md)
 * [🏆 日记](启航/日记/README.md)
   * [😀 2022-11-13](启航/日记/2022-11-13.md)
   * [😀 2022-11-4](启航/日记/2022-11-4.md)
 
-## 网络&系统 <a href="#计算机网络" id="计算机网络"></a>
+## 网络&系统 <a href="#ji-suan-ji-wang-luo" id="ji-suan-ji-wang-luo"></a>
 
 * [🔧 端口&协议](计算机网络/端口&协议/README.md)
   * [NFS 介绍](计算机网络/端口&协议/nfs-jie-shao.md)
@@ -46,7 +46,7 @@
   * [Linux命令](计算机网络/linux/Linux命令.md)
   * [Linux](计算机网络/linux/linux.md)
 
-## 工具 <a href="#工具" id="工具"></a>
+## 工具
 
 * [🔧 端口&服务](工具/端口&服务/README.md)
   * [22 -- SSH](工具/端口&服务/22-ssh/README.md)
@@ -121,7 +121,7 @@
 * [enum4linux-ng](工具/enum4linux-ng.md)
 * [crackmapexec](工具/crackmapexec.md)
 
-## 🛸 权限提升 <a href="#权限提升" id="权限提升"></a>
+## 🛸 权限提升
 
 * [🔧 Active Directory](权限提升/active-directory/README.md)
   * [🦯 AD 枚举和攻击 -- 工具](权限提升/active-directory/ad-mei-ju-he-gong-ji-gong-ju.md)
@@ -134,7 +134,7 @@
     * [📱 Pspy](<权限提升/linux/Linux 提权工具/pspy.md>)
   * [Linux 提权](权限提升/linux/linux-ti-quan.md)
 
-## 🕶 HTB 学院 <a href="#HTB 学院" id="HTB 学院"></a>
+## 🕶 HTB 学院
 
 * [SHELLS\&Payloads](<HTB 学院/shells-and-payloads.md>)
 * [文件传输](<HTB 学院/wen-jian-chuan-shu.md>)
@@ -143,7 +143,7 @@
 * [Pivoting &隧道和端口转发](<HTB 学院/pivoting-sui-dao-he-duan-kou-zhuan-fa.md>)
 * [密码攻击](<HTB 学院/mi-ma-gong-ji.md>)
 
-## 🖥 WEB 渗透测试 <a href="#WEB 渗透测试" id="WEB 渗透测试"></a>
+## 🖥 WEB 渗透测试
 
 * [🔧 文件包含](<WEB 渗透测试/wen-jian-bao-han/README.md>)
   * [/proc/self/envirom](<WEB 渗透测试/wen-jian-bao-han/proc-self-envirom.md>)
