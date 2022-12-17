@@ -3,6 +3,7 @@
 > * [SQLMAP深入分析-使用篇（基础使用、进阶命令、tamper脚本）](https://blog.csdn.net/q20010619/article/details/122222636?ops\_request\_misc=\&request\_id=\&biz\_id=102\&utm\_term=sqlmap%20%E8%84%9A%E6%9C%AC%E4%BF%A1%E6%81%AF\&utm\_medium=distribute.pc\_search\_result.none-task-blog-2\~all\~sobaiduweb\~default-0-122222636.142^v68^pc\_rank\_34\_queryrelevant25,201^v4^add\_ask,213^v2^t3\_control1\&spm=1018.2226.3001.4187)
 > * [sqlmap用户手册详解【实用版】](https://www.vuln.cn/2035)
 > * [Sqlmap使用教程【个人笔记精华整理】](https://www.vuln.cn/1992)
+> * [sqlmap 官网中文教程](https://sqlmap.kvko.live/)
 
 ## SQLMAP 简介
 
