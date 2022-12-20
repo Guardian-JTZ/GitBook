@@ -1,4 +1,4 @@
-# /proc/
+# /proc
 
 ## /proc/self 用于哪个进程
 

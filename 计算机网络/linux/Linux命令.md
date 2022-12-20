@@ -4,7 +4,7 @@ coverY: 0
 layout: editorial
 ---
 
-# Linux
+# Linux命令
 
 > 一些简单又实用的工具：
 >

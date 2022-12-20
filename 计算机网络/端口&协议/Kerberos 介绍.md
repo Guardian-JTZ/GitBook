@@ -2,7 +2,7 @@
 description: 关于 Kerberos 认证的介绍
 ---
 
-# Kerberos--介绍
+# Kerberos 介绍
 
 ## 介绍
 
@@ -22,7 +22,7 @@ Kerberos 是一种网络认证协议，其设计目标是通过密钥系统为�
    2. TGT （Ticket Granting Ticket） ： 入场券，通过TGT 来获取凭据，是一种临时凭证的存在
 5. Account Database : 存储所有的客户端的白名单，只有存在于白名单的客户端才能申请到 TGT
 
-<figure><img src="../../../.gitbook/assets/Kerberos1.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Kerberos1.png" alt=""><figcaption></figcaption></figure>
 
 ## 域认证
 
@@ -32,11 +32,11 @@ Kerberos 是一种网络认证协议，其设计目标是通过密钥系统为�
 2. client 收到 TGT 后，继续向 Kerberos 请求，希望获取访问 server 的权限， Kerberos 得到消息后，这时候通过 client 消息中的TGT，判断出了client拥有了这个权限，给了client 访问 server 的权限票证 TGS
 3. client 得到 TGS 后就可以成功访问 server ，只是针对这个 server
 
-<figure><img src="../../../.gitbook/assets/Kerberos2.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Kerberos2.png" alt=""><figcaption></figcaption></figure>
 
 ### 2. 详细流程
 
-<figure><img src="../../../.gitbook/assets/Kerberos3.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Kerberos3.png" alt=""><figcaption></figcaption></figure>
 
 #### 1. Client & AS
 

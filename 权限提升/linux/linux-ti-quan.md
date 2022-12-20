@@ -2,7 +2,7 @@
 
 ## 简介
 
-1. 枚举是提权的关键所在，存在多个辅助脚本 ： ([LinEnum](https://github.com/rebootuser/LinEnum) ),
+1. 枚举是提权的关键所在，存在多个辅助脚本 ： ([LinEnum](https://github.com/rebootuser/LinEnum) ，[PEASS](https://github.com/carlospolop/PEASS-ng)),
 
 ```shell
 # 查找可写目录
