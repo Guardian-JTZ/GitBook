@@ -2,7 +2,7 @@
 
 ## 前言
 
-关于 NFS 的介绍查看文章--> [链接](../../../计算机网络/端口&协议/nfs-jie-shao.md)
+关于 NFS 的介绍查看文章--> [链接](../../../网络&系统/duan-kou-xie-yi/nfs-jie-shao.md)
 
 默认端口： 2048-TCP/UDP （除版本4 之外只需要 TCP 和 UDP）
 
