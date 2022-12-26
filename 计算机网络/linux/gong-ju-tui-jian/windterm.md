@@ -1,5 +1,5 @@
 ---
-description: 这是一个中断模拟程序,花里胡哨的
+description: 这是一个终端模拟程序,花里胡哨的
 ---
 
 # WindTerm
