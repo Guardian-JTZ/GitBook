@@ -15,6 +15,7 @@
   * [NFS 介绍](计算机网络/端口&协议/nfs-jie-shao.md)
   * [Kerberos 介绍](<计算机网络/端口&协议/Kerberos 介绍.md>)
   * [WINRM 介绍](<网络&系统/duan-kou-xie-yi/WINRM 介绍.md>)
+  * [Telnet 协议](网络&系统/duan-kou-xie-yi/telnet-xie-yi.md)
   * [RDP](权限提升/协议/rdp.md)
   * [SNMP](权限提升/协议/snmp.md)
   * [DNS](权限提升/协议/dns.md)
