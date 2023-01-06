@@ -161,3 +161,7 @@
 
 * [🔧 文件包含](<WEB 渗透测试/wen-jian-bao-han/README.md>)
   * [/proc/self/envirom](<WEB 渗透测试/wen-jian-bao-han/proc-self-envirom.md>)
+* [信息泄露](web-shen-tou-ce-shi/xin-xi-xie-lou/README.md)
+  * [信息泄露工具](web-shen-tou-ce-shi/xin-xi-xie-lou/xin-xi-xie-lou-gong-ju.md)
+* [目录遍历](web-shen-tou-ce-shi/mu-lu-bian-li.md)
+* [命令注入](web-shen-tou-ce-shi/ming-ling-zhu-ru.md)
