@@ -157,11 +157,18 @@
 * [Pivoting &隧道和端口转发](<HTB 学院/pivoting-sui-dao-he-duan-kou-zhuan-fa.md>)
 * [密码攻击](<HTB 学院/mi-ma-gong-ji.md>)
 
-## 🖥 WEB 渗透测试
+## 🖥 WEB 渗透测试 <a href="#WEB 渗透测试" id="WEB 渗透测试"></a>
 
-* [🔧 文件包含](<WEB 渗透测试/wen-jian-bao-han/README.md>)
-  * [/proc/self/envirom](<WEB 渗透测试/wen-jian-bao-han/proc-self-envirom.md>)
-* [信息泄露](web-shen-tou-ce-shi/xin-xi-xie-lou/README.md)
-  * [信息泄露工具](web-shen-tou-ce-shi/xin-xi-xie-lou/xin-xi-xie-lou-gong-ju.md)
-* [目录遍历](web-shen-tou-ce-shi/mu-lu-bian-li.md)
-* [命令注入](web-shen-tou-ce-shi/ming-ling-zhu-ru.md)
+* [🔧 文件包含](<WEB 渗透测试/文件包含/README.md>)
+  * [/proc/self/envirom](<WEB 渗透测试/文件包含/proc-self-envirom.md>)
+* [信息泄露](<WEB 渗透测试/信息泄露/README.md>)
+  * [信息泄露工具](<WEB 渗透测试/信息泄露/信息泄露工具.md>)
+* [目录遍历](<WEB 渗透测试/目录遍历.md>)
+* [😀 命令注入](<WEB 渗透测试/命令注入/README.md>)
+  * [🚚 资源](<WEB 渗透测试/命令注入/资源.md>)
+* [SSRF](<WEB 渗透测试/SSRF/README.md>)
+  * [资源](<WEB 渗透测试/SSRF/资源.md>)
+* [访问控制](<WEB 渗透测试/访问控制.md>)
+* [文件上传](<WEB 渗透测试/文件上传/README.md>)
+  * [资源](<WEB 渗透测试/文件上传/资源.md>)
+  * [WAF 绕过](<WEB 渗透测试/文件上传/WAF 绕过.md>)
