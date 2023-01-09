@@ -1,6 +1,6 @@
 # 88 tcp/udp -- Kerberos
 
-Kerberos 介绍 -->[kerberos-jie-shao.md](../../../网络&系统/端口&协议/kerberos-jie-shao.md "mention")
+Kerberos 介绍 -->[Kerberos 介绍.md](<../../../计算机网络/端口&协议/Kerberos 介绍.md> "mention")
 
 ## 攻击漏洞方法
 
