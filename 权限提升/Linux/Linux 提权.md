@@ -36,7 +36,7 @@ cat /etc/lsb-release
 
 ### 4. 特殊权限
 
-详细介绍 --> [链接](pei-he/linux-quan-xian-suid-sgid-sticky.md)
+详细介绍 --> [链接](<配合/Linux 权限： SUID, SGID, sticky.md>)
 
 > setuid 权限可以允许用户使用另一个用户的权限执行脚本或程序，通常具有提升的权限，该 setuid 位显示为 s
 
