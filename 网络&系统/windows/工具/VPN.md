@@ -14,7 +14,7 @@ VPN  推荐
 
 ## Clash
 
-> Clash 下载链接 --> [百度网盘](https://pan.baidu.com/s/1ILkP\_BsmjI9VHdZaKCpecA?pwd=16q8)
+> Clash 下载链接 --> [百度网盘](https://pan.baidu.com/s/1OzEFU\_RuaMaMgOryLiCNNw?pwd=pf92)
 
 
 
