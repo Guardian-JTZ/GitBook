@@ -1,7 +1,5 @@
 # DHCP
 
-\[TOC]
-
 ## 引言
 
 [参考链接](https://zh.wikipedia.org/wiki/%E5%8A%A8%E6%80%81%E4%B8%BB%E6%9C%BA%E8%AE%BE%E7%BD%AE%E5%8D%8F%E8%AE%AE)

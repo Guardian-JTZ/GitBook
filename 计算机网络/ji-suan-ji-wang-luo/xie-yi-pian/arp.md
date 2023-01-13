@@ -1,7 +1,5 @@
 # ARP
 
-\[TOC]
-
 ## 引言
 
 [参考文章](https://zh.wikipedia.org/wiki/%E5%9C%B0%E5%9D%80%E8%A7%A3%E6%9E%90%E5%8D%8F%E8%AE%AE)
