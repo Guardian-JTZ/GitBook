@@ -64,11 +64,11 @@ Windows远程管理是“WS 管理协议的 Microsoft 实施，该协议是基�
     <figure><img src="../../../.gitbook/assets/WinRM5.jpeg" alt=""><figcaption></figcaption></figure>
 * **加载 powershell 脚本** : 要加载ps1文件，你只需键入名称（可以使用tab自动补全）。脚本必须位于-s参数中设置的路径中。再次键入menu并查看加载的功能。
 
-<figure><img src="../../../.gitbook/assets/WINRM6 (1).jpeg" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/WINRM6.jpeg" alt=""><figcaption></figcaption></figure>
 
 Invoke-Binary：允许在内存中执行从c#编译的exes。该名称可使用tab键自动补全，最多允许3个参数。可执行文件必须在-e参数设置的路径中。
 
-<figure><img src="../../../.gitbook/assets/WINRM7 (1).jpeg" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/WINRM7.jpeg" alt=""><figcaption></figcaption></figure>
 
 *   l04d3r-LoadDll：允许在内存中加载dll库，相当于：
 

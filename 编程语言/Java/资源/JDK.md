@@ -34,7 +34,7 @@ description: JDk8/11/16
 C:\Users\14894>  where java
 ```
 
-<figure><img src="../../../.gitbook/assets/image (2).png" alt=""><figcaption><p>这是从网上找的图片，因为我的已经删掉了</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/JDK1.png" alt=""><figcaption><p>这是从网上找的图片，因为我的已经删掉了</p></figcaption></figure>
 
 删掉后你就可以上面的命令了
 
