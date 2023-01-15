@@ -73,6 +73,7 @@
     * [/usr](网络&系统/linux/目录/usr.md)
     * [/proc](计算机网络/linux/文件夹/proc.md)
   * [工具推荐](计算机网络/linux/gong-ju-tui-jian/README.md)
+    * [linux下使用clash(GUI)](wang-luo-xi-tong/linux/gong-ju-tui-jian/linux-xia-shi-yong-clashgui.md)
     * [WindTerm](计算机网络/linux/gong-ju-tui-jian/windterm.md)
   * [Linux命令](计算机网络/linux/Linux命令.md)
   * [Linux](计算机网络/linux/linux.md)
