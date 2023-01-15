@@ -64,6 +64,8 @@
   * [杂类](网络&系统/linux/杂类/README.md)
     * [如何在 SSH 身份验证后运行脚本](网络&系统/linux/杂类/ru-he-zai-ssh-shen-fen-yan-zheng-hou-yun-hang-jiao-ben.md)
     * [探索 Reverse SHELL](网络&系统/linux/杂类/tan-suo-reverse-shell.md)
+    * [显示文件信息](wang-luo-xi-tong/linux/za-lei/xian-shi-wen-jian-xin-xi.md)
+    * [恢复文件](wang-luo-xi-tong/linux/za-lei/hui-fu-wen-jian.md)
   * [权限](计算机网络/linux/权限/README.md)
     * [Linux 访问控制列表 (ACL) 简介](<计算机网络/linux/权限/Linux 访问控制列表 (ACL) 简介.md>)
   * [目录](计算机网络/linux/文件夹/README.md)
