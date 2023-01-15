@@ -145,6 +145,7 @@
   * [DomainPasswordSpray](工具/mi-ma-jie-mi/domainpasswordspray.md)
 * [渗透框架工具](工具/shen-tou-kuang-jia-gong-ju/README.md)
   * [Metasploit](工具/shen-tou-kuang-jia-gong-ju/metasploit.md)
+  * [Searchsploit](gong-ju/shen-tou-kuang-jia-gong-ju/searchsploit.md)
 * [文件](工具/wen-jian/README.md)
   * [Imagemagick](工具/wen-jian/imagemagick.md)
   * [Exiftool](工具/wen-jian/exiftool.md)
