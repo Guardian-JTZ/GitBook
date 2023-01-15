@@ -38,3 +38,11 @@ $ vi /etc/environment
 </strong>sudo chmod 444 /etc/environment
 # 重启电脑
 </code></pre>
+
+## 设置 apt 走代理
+
+```bash
+sudo vi /etc/apt/apt.conf.d/10proxy   #这个文件正常不存在，会新建一个
+#编辑内容为：
+Acquire::http::Proxy "http://192.168.1.1:8080";
+```
