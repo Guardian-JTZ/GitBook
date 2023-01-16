@@ -2,7 +2,7 @@
 
 1.  安装 [Clash.for.Windows-0.20.12-x64-linux.tar.gz](https://github.com/Fndroid/clash\_for\_windows\_pkg/releases/download/0.20.12/Clash.for.Windows-0.20.12-x64-linux.tar.gz)
 
-    <figure><img src="../../../.gitbook/assets/image (1).png" alt=""><figcaption><p>下载指定文件</p></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>下载指定文件</p></figcaption></figure>
 
 
 
@@ -20,7 +20,7 @@ $ cd clash
 $ ./cfw 
 </code></pre>
 
-<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 ## 修改配置文件
 
