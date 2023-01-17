@@ -1,7 +1,9 @@
 ---
-description: 这是一个终端模拟程序,花里胡哨的
+description: 记录一些终端模拟程序
 ---
 
-# WindTerm
+# 终端模拟程序
+
+## WindTerm
 
 官网地址 --> [Github](https://github.com/kingToolbox/WindTerm)

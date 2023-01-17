@@ -1,6 +1,4 @@
 ---
-cover: ../../.gitbook/assets/背景5.jpg
-coverY: 0
 layout: editorial
 ---
 

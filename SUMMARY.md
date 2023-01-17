@@ -59,12 +59,13 @@
     * [RAMMap](网络&系统/windows/工具/RAMMap.md)
     * [Snipaste](网络&系统/windows/工具/Snipaste.md)
     * [PowerTotys](网络&系统/windows/gong-ju/powertotys.md)
+    * [浏览器](wang-luo-xi-tong/windows/gong-ju/liu-lan-qi/README.md)
+      * [浏览器插件](wang-luo-xi-tong/windows/gong-ju/liu-lan-qi/liu-lan-qi-cha-jian.md)
   * [Windows](计算机网络/windows/windows.md)
 * [🔧 Linux](计算机网络/linux/README.md)
   * [杂类](网络&系统/linux/杂类/README.md)
     * [如何在 SSH 身份验证后运行脚本](网络&系统/linux/杂类/ru-he-zai-ssh-shen-fen-yan-zheng-hou-yun-hang-jiao-ben.md)
     * [探索 Reverse SHELL](网络&系统/linux/杂类/tan-suo-reverse-shell.md)
-    * [显示文件信息](wang-luo-xi-tong/linux/za-lei/xian-shi-wen-jian-xin-xi.md)
     * [恢复文件](wang-luo-xi-tong/linux/za-lei/hui-fu-wen-jian.md)
   * [权限](计算机网络/linux/权限/README.md)
     * [Linux 访问控制列表 (ACL) 简介](<计算机网络/linux/权限/Linux 访问控制列表 (ACL) 简介.md>)
@@ -74,12 +75,11 @@
     * [/proc](计算机网络/linux/文件夹/proc.md)
   * [工具推荐](计算机网络/linux/gong-ju-tui-jian/README.md)
     * [linux下使用clash(GUI)](wang-luo-xi-tong/linux/gong-ju-tui-jian/linux-xia-shi-yong-clashgui.md)
-    * [WindTerm](计算机网络/linux/gong-ju-tui-jian/windterm.md)
-  * [Linux命令](计算机网络/linux/Linux命令.md)
+    * [终端模拟程序](计算机网络/linux/gong-ju-tui-jian/windterm.md)
+  * [Linux命令](wang-luo-xi-tong/linux/linux-ming-ling/README.md)
+    * [查看文件信息](wang-luo-xi-tong/linux/linux-ming-ling/cha-kan-wen-jian-xin-xi.md)
+    * [磁盘信息](wang-luo-xi-tong/linux/linux-ming-ling/ci-pan-xin-xi.md)
   * [Linux](计算机网络/linux/linux.md)
-* [🔧 Docker](网络&系统/docker.md)
-* [🔧 浏览器](网络&系统/浏览器/README.md)
-  * [浏览器插件](网络&系统/浏览器/浏览器插件.md)
 
 ## 工具
 
@@ -153,10 +153,11 @@
 * [开发工具](工具/kai-fa-gong-ju/README.md)
   * [Docker](工具/kai-fa-gong-ju/docker.md)
   * [Git](工具/kai-fa-gong-ju/git.md)
+* [浏览器](gong-ju/liu-lan-qi/README.md)
+  * [浏览器密码&历史等信息](gong-ju/liu-lan-qi/hackbrowserdata.md)
 * [搜索器语法](工具/sou-suo-qi-yu-fa.md)
 * [enum4linux-ng](工具/enum4linux-ng.md)
 * [crackmapexec](工具/crackmapexec.md)
-* [HackBrowserData](工具/hackbrowserdata.md)
 
 ## 🛸 权限提升
 
@@ -222,7 +223,12 @@
   * [资源](编程语言/Python/资源/README.md)
     * [Python 环境](<编程语言/Python/资源/Python 环境.md>)
 
+## 🔧 开发
+
+* [🔧 Docker](kai-fa/docker.md)
+
 ## 🔧 杂章
 
-* [区域传输](杂章/区域传输.md)
-* [XFF\&Referer](za-zhang/xff-and-referer.md)
+* [杂章](za-zhang/za-zhang/README.md)
+  * [区域传输](za-zhang/za-zhang/qu-yu-chuan-shu.md)
+  * [XFF\&Referer](za-zhang/za-zhang/xff-and-referer.md)
