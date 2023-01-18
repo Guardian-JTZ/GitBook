@@ -43,6 +43,7 @@
 * [🔧 操作系统](计算机网络/操作系统.md)
 * [🔧 Windows](计算机网络/windows/README.md)
   * [工具](网络&系统/windows/gong-ju/README.md)
+    * [WSL 安装 kail](wang-luo-xi-tong/windows/gong-ju/wsl-an-zhuang-kail.md)
     * [VMware](网络&系统/windows/工具/vmware.md)
     * [WizTree](网络&系统/windows/工具/WizTree.md)
     * [Beyond Compare 4](<网络&系统/windows/工具/Beyond Compare 4.md>)
