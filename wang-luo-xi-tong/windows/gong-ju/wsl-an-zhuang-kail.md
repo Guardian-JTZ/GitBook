@@ -95,3 +95,21 @@ kex <mode> <command> <parameters>
 
 ```
 {% endcode %}
+
+## 添加代理
+
+> 这个安装的 IP 和本机 IP 不在同一个网段，所以添加代理很重要，这里我使用  proxychains
+
+<pre class="language-bash"><code class="lang-bash"><strong># 安装
+</strong><strong>sudo apt install proxychains
+</strong><strong># 修改配置文件
+</strong><strong>vim /etc/proxychains.conf
+</strong><strong>    socks4 IP 9095 # 添加
+</strong>proxychains curl -i www.google.com
+</code></pre>
+
+> IP  的值为： 172.24.32.1
+>
+>
+
+<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>

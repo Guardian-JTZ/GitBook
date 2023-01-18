@@ -47,3 +47,9 @@ description: 推荐浏览器插件
 > 油猴的插件  ：  百度网盘简易下载助手（直链下载复活版）配合 IDM 使用
 
 <figure><img src="../../../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+
+## HackTools
+
+> 这个插件挺好的，推荐一手
+>
+> 火狐插件
