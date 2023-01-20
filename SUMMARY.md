@@ -162,6 +162,10 @@
 * [搜索器语法](工具/sou-suo-qi-yu-fa.md)
 * [enum4linux-ng](工具/enum4linux-ng.md)
 * [crackmapexec](工具/crackmapexec.md)
+* [GDB](gong-ju/gdb/README.md)
+  * [PEDA](gong-ju/gdb/peda.md)
+* [OPENSSL](gong-ju/openssl/README.md)
+  * [Heartbleed](gong-ju/openssl/heartbleed.md)
 
 ## 🛸 权限提升
 

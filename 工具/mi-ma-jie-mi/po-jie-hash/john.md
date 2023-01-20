@@ -11,11 +11,22 @@ hashcat -m 9600 office_hash ./rockyou.txt
 
 ## 2. 破解受密码保护的 ZIP 文件
 
+### 1. john
+
 ```shell
 # 提取哈希
 zip2john.py ./blueprints.zip
 # 破解哈希
 hashcat -a 0 -m 17200 pdf_hash_to_crack ./rockyou.txt
+```
+
+### 2. fcrackzip
+
+> Fcrackzip是一款专门破解zip类型压缩文件密码的工具，工具小巧方便、破解速度快，能使用字典和指定字符集破解，适用于linux、mac osx 系统。
+
+```bash
+# 安装
+sudo apt-get install fcrackzip
 ```
 
 ## 3. 破解受密码保护的 Keepass 文件
