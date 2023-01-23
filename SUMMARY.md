@@ -174,11 +174,13 @@
 * [🔧 Windows](权限提升/Windows/README.md)
   * [🦯 Windows 权限提升工具](<权限提升/Windows/Windows 权限提升工具.md>)
 * [🔧 Linux](权限提升/Linux/README.md)
-  * [配合](权限提升/Linux/配合/README.md)
+  * [提权](quan-xian-ti-sheng/linux/ti-quan/README.md)
+    * [Linux 提权思路](quan-xian-ti-sheng/linux/ti-quan/linux-ti-quan.md)
+    * [Linux 提权备忘录](quan-xian-ti-sheng/linux/ti-quan/linux-ti-quan-bei-wang-lu.md)
+  * [资料](权限提升/Linux/配合/README.md)
     * [Linux 权限： SUID, SGID, sticky](<权限提升/Linux/配合/Linux 权限： SUID, SGID, sticky.md>)
   * [🦯 Linux 提权工具](<权限提升/Linux/Linux 提权工具/README.md>)
     * [📱 Pspy](<权限提升/Linux/Linux 提权工具/Pspy.md>)
-  * [Linux 提权](<权限提升/Linux/Linux 提权.md>)
 
 ## 🕶 HTB 学院
 
