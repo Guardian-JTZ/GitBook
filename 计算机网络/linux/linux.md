@@ -297,6 +297,10 @@ description: Linux 的学习笔记
 
 ### 1. crond任务调度
 
+> * 执行时间的计算 --> [网页跳转](https://tool.lu/crontab)
+> * [Crontab 生成器](https://crontab-generator.org/)
+> * [Cron Guru](https://crontab.guru/)
+
 <figure><img src="../../.gitbook/assets/l11.png" alt=""><figcaption></figcaption></figure>
 
 功能描述： crond进行定时任务的设置 基本指令：

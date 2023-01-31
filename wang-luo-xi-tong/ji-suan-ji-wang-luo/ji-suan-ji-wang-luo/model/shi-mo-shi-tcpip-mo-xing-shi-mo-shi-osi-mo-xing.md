@@ -21,10 +21,21 @@
   * 处理数据格式和加密
 * `会话层 （Session）`
   * l2tp (第二层隧道协议) ： RTCP、h.245、Socks
-* 传输层 （Transport）： TCP UDP | segmemt
-* 网络层 （Network） : IP 地址 （路由器） | 包
-* 数据链路层 （Data Link）： MAC 地址 （交换机）| 帧
-* 物理层 （Physical）： 传输设备 （电缆、光纤、双绞线、集线器、中继器）
+* 传输层 （Transport）
+  * 依据：端口
+  * 协议：TCP、UDP
+  * 处理数据名称： segmemt
+* 网络层 （Network）
+  * 依据： IP 地址
+  * 设备： 路由器
+  * 协议： OSPF、RIP、ARP
+  * 处理数据名称：package
+* 数据链路层 （Data Link）
+  * 依据： MAC 地址
+  * 设备： 交换机
+  * 处理数据名称： 帧
+* 物理层 （Physical）
+  * 传输设备： 电缆、光纤、双绞线、集线器、中继器
 
 > 速记： ALL PEOPLE SEEM TO NEED DATA ProCESSING (所有人似乎都需要处理数据)
 
