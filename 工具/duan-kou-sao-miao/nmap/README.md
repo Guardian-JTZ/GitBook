@@ -90,7 +90,7 @@ nmap --script 类别
 - fuzzer: 模糊测试的脚本，发送异常的包到目标机，探测出潜在漏洞
 - intrusive: 入侵性的脚本，此类脚本可能引发对方的IDS/IPS的记录或屏蔽
 - malware: 探测目标机是否感染了病毒、开启了后门等信息  
-- safe: 此类与intrusive相反，属于安全性脚本  
+- safe: 此类与intrusive相反，属于安全性脚本，不会影响目标
 - version: 负责增强服务与版本扫描（Version Detection）功能的脚本  
 - vuln: 负责检查目标机是否有常见的漏洞（Vulnerability），如是否有MS08_067
 ```
@@ -144,7 +144,7 @@ blah.highon.coffee, namp.org/24, 192.168.0.1;10.0.0-25.1-254
 -sL                     仅仅是显示,扫描的IP数目,不会进行任何扫描
 -sP                     ping扫描,即主机发现,显对扫描做出响应的主机
 -P0                     Nmap 默认只对确定正在运行的主机进行高强度扫描，使用该命令可以对每一个目标进行扫描
--Pn                     不检测主机存活
+-Pn                     不检测主机是否存活
 -PS/PA/PU               TCP SYN Ping/TCP ACK Ping/UDP Ping
 -PE/PP/PM               使用ICMP echo, timestamp and netmask 请求包发现主机
 -PR                     ARP Ping 扫描，

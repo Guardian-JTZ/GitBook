@@ -141,6 +141,7 @@
 * [端口扫描](工具/duan-kou-sao-miao/README.md)
   * [masscan](工具/duan-kou-sao-miao/masscan.md)
   * [nmap](工具/duan-kou-sao-miao/nmap/README.md)
+    * [研究](gong-ju/duan-kou-sao-miao/nmap/yan-jiu.md)
     * [nmap-common](工具/duan-kou-sao-miao/nmap/nmap-common.md)
     * [ndiff](工具/duan-kou-sao-miao/nmap/ndiff.md)
     * [nping](工具/duan-kou-sao-miao/nmap/nping.md)
@@ -155,7 +156,7 @@
 * [自动化扫描工具](工具/zi-dong-hua-sao-miao-gong-ju/README.md)
   * [nikto](工具/zi-dong-hua-sao-miao-gong-ju/nikto.md)
   * [SQLMAP](工具/zi-dong-hua-sao-miao-gong-ju/sqlmap.md)
-* [密码&解密](工具/mi-ma-jie-mi/README.md)
+* [密码&解密&爆破](工具/mi-ma-jie-mi/README.md)
   * [识别 Hash](工具/mi-ma-jie-mi/shi-bie-hash/README.md)
     * [hash-identifier](工具/mi-ma-jie-mi/shi-bie-hash/hash-identifier.md)
     * [hashid](工具/mi-ma-jie-mi/shi-bie-hash/hashid.md)
@@ -171,7 +172,6 @@
   * [Imagemagick](工具/wen-jian/imagemagick.md)
   * [Exiftool](工具/wen-jian/exiftool.md)
 * [开发工具](工具/kai-fa-gong-ju/README.md)
-  * [Docker](工具/kai-fa-gong-ju/docker.md)
   * [Git](工具/kai-fa-gong-ju/git.md)
 * [浏览器](gong-ju/liu-lan-qi/README.md)
   * [浏览器密码&历史等信息](gong-ju/liu-lan-qi/hackbrowserdata.md)
@@ -253,15 +253,16 @@
 
 ## 🔧 云开发
 
-* [🔧 Docker](yun-kai-fa/docker.md)
+* [🔧 Docker](yun-kai-fa/docker/README.md)
+  * [🔧 Docker](yun-kai-fa/docker/docker.md)
+
+## 🔧 逆向
+
+* [GDB](ni-xiang/gdb/README.md)
+  * [PEDA](ni-xiang/gdb/peda.md)
 
 ## 🔧 杂章
 
 * [杂章](za-zhang/za-zhang/README.md)
   * [区域传输](za-zhang/za-zhang/qu-yu-chuan-shu.md)
   * [XFF\&Referer](za-zhang/za-zhang/xff-and-referer.md)
-
-## 🔧 逆向
-
-* [GDB](ni-xiang/gdb/README.md)
-  * [PEDA](ni-xiang/gdb/peda.md)
