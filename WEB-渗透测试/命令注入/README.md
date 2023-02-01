@@ -2,11 +2,11 @@
 description: OWASP-TOP10 漏洞
 ---
 
-# 😀 命令注入
+# 命令注入（RCE）
 
 ## 介绍
 
-命令注入漏洞是一种允许攻击者在运行应用程序的服务器上执行任意操作系统命令，攻击者通过会利用此漏洞来破坏基础设施的其他部分，利用信任关系将攻击转向组织内的其他系统
+命令注入漏洞是一种通过滥用应用程序的行为，在运行应用程序的服务器上执行操作系统命令，攻击者通过会利用此漏洞来破坏基础设施的其他部分，利用信任关系将攻击转向组织内的其他系统
 
 ## 影响
 
@@ -35,19 +35,20 @@ https://vulnerable-website.com/endpoint?parameter=1|whoami
 
 ### 2. 时间延迟
 
-> 大多数操作系统命令注入都是盲注，不会为我们产生任何输出，我们可以使用时间延迟来验证命令注入
+> 大多数操作系统命令注入都是<mark style="color:red;">盲注</mark>，不会为我们产生任何输出，我们可以使用时间延迟来验证命令注入
 
 ```shell
-# ping -c 10 127.0.0.1
-https://vulnerable-website.com/endpoint?parameter=x||ping+-c+10+127.0.0.1||
+ping -c 10 127.0.0.1
+sleep  # 休眠几秒 Linux
+timeout  # Windows
 ```
 
 ### 3. 重定向输出
 
-> 我们可以将注入命令的输出重定向到 WEB 根目录的一个文件中，然后访问它
+> 这也是一种利用<mark style="color:red;">盲注</mark>的方法，我们可以将注入命令的输出重定向到 WEB 根目录的一个文件中，然后访问它
 
 ```shell
-https://vulnerable-website.com/endpoint?parameter=12||whoami>/var/www/images/output.txt||
+whoami>/var/www/images/output.txt
 ```
 
 ### 4. 使用 OAST 进行操作系统命令注入
