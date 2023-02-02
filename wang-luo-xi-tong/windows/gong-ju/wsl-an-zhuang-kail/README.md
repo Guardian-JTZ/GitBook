@@ -76,7 +76,7 @@ sudo apt install -y kali-linux-default
 $ sudo apt install -y kali-win-kex
 ```
 
-<figure><img src="../../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 安装完成后输入`kex`，之后要求设置密码（密码长度至少为6）。设置完成即开启gui。
 
@@ -112,4 +112,4 @@ kex <mode> <command> <parameters>
 >
 >
 
-<figure><img src="../../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
