@@ -2,7 +2,8 @@
 
 ## Telnet 协议
 
-Telnet 协议是一种最早的 Internet 应用， Telnet 协议提供了一种通过`终端远程登陆`到服务器的方式，呈现一个交互式操作界面，用户可以先登陆到一个主机，再通过 telnet 的方式远程登陆到网络上的其他主机，而不需要为每个主机都连接一个硬件终端，然后对设备进行配置和管理
+* Telnet 协议是一种最早的 Internet 应用， Telnet 协议提供了一种通过`终端远程登陆`到服务器的方式，呈现一个交互式操作界面，用户可以先登陆到一个主机，再通过 telnet 的方式远程登陆到网络上的其他主机，而不需要为每个主机都连接一个硬件终端，然后对设备进行配置和管理
+* Telnet 是以 `明文`形式发送所有消息，没有安全机制，所以已被 SSH 取代
 
 ## Telnet 基本概念
 
@@ -62,6 +63,10 @@ telnet连接的任何一方都可以主动发起请求。请求含义和用法�
 <figure><img src="../../.gitbook/assets/Telnet5.png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/Telnet6.png" alt=""><figcaption></figcaption></figure>
+
+## 攻击
+
+* [参考实例](https://tryhackme.com/room/networkservices) `不会总结`
 
 ## 参考文章
 

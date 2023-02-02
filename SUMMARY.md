@@ -252,7 +252,7 @@
   * [高级Bash脚本编程指南](https://linuxstory.gitbook.io/advanced-bash-scripting-guide-in-chinese/)
   * [1.1 变量](bian-cheng-yu-yan/shell-jiao-cheng/1.1-bian-liang.md)
   * [1.2 特殊字符](bian-cheng-yu-yan/shell-jiao-cheng/1.2-te-shu-zi-fu.md)
-  * [正则表达式](bian-cheng-yu-yan/shell-jiao-cheng/zheng-ze-biao-da-shi.md)
+  * [1.3 正则表达式](bian-cheng-yu-yan/shell-jiao-cheng/1.3-zheng-ze-biao-da-shi.md)
 
 ## 🔧 云开发
 

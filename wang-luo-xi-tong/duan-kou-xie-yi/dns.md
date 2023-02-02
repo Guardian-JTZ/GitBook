@@ -19,7 +19,7 @@
   * 迭代法--服务器
   * 递归法--客户端
     * 客户端发送查询报文"query zh.wikipedia.org"至DNS服务器，DNS服务器首先检查自身缓存，如果存在记录则直接返回结果。
-    * 如果记录老化或不存在，则：
+    * 如果记录老化或不存在计算机将向 `递归DNS`服务器发送请求，当`递归DNS`服务器缓存中没有时才会向顶级域服务器发送请求
       1. DNS服务器向根域名服务器发送查询报文"query zh.wikipedia.org"，根域名服务器返回顶级域 .org 的顶级域名服务器地址。
       2. DNS服务器向 .org 域的顶级域名服务器发送查询报文"query zh.wikipedia.org"，得到二级域.wikipedia.org 的权威域名服务器地址。
       3. DNS服务器向 .wikipedia.org 域的权威域名服务器发送查询报文"query zh.wikipedia.org"，得到主机 zh 的A记录，存入自身缓存并返回给客户端。

@@ -49,14 +49,3 @@ magic output = script.out  # 魔术脚本的输出需要存储在哪里
 python3 smbserver.py share 共享目录
 ```
 
-## 工具使用
-
-### 1. [smbclient](../../工具/端口-服务/139-and-445-smb/smbclient.md)
-
-### 2.[ rpcclient](../../工具/端口-服务/139-and-445-smb/rpcclient.md)
-
-### 3. [smbmap](../../工具/端口-服务/139-and-445-smb/smbmap.md)
-
-### 4. [crackmapexec](../../工具/crackmapexec.md)
-
-### 5. [enum4linux-ng](broken-reference)
