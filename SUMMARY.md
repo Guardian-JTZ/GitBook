@@ -253,6 +253,7 @@
   * [1.1 变量](bian-cheng-yu-yan/shell-jiao-cheng/1.1-bian-liang.md)
   * [1.2 特殊字符](bian-cheng-yu-yan/shell-jiao-cheng/1.2-te-shu-zi-fu.md)
   * [1.3 正则表达式](bian-cheng-yu-yan/shell-jiao-cheng/1.3-zheng-ze-biao-da-shi.md)
+  * [1.4 数组](bian-cheng-yu-yan/shell-jiao-cheng/1.4-shu-zu.md)
 
 ## 🔧 云开发
 
