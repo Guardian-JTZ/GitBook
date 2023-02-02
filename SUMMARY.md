@@ -184,7 +184,8 @@
 ## 🛸 权限提升
 
 * [🔧 Active Directory](<权限提升/Active Directory/README.md>)
-  * [🦯 AD 枚举和攻击 -- 工具](<权限提升/Active Directory/AD 枚举和攻击 -- 工具.md>)
+  * [🦯 AD 枚举和攻击 -- 工具](quan-xian-ti-sheng/active-directory/ad-mei-ju-he-gong-ji-gong-ju/README.md)
+    * [BloodHound](quan-xian-ti-sheng/active-directory/ad-mei-ju-he-gong-ji-gong-ju/bloodhound.md)
 * [🔧 Windows](权限提升/Windows/README.md)
   * [🦯 Windows 权限提升工具](<权限提升/Windows/Windows 权限提升工具.md>)
 * [🔧 Linux](权限提升/Linux/README.md)
