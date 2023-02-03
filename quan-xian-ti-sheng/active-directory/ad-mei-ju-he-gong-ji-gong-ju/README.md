@@ -9,7 +9,6 @@ description: 这是一个关于 AD 攻击中可能会使用的一些工具
 | 工具                                                                                                                                            | 描述                                                                                                                                                                                                                                                        |
 | --------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [PowerView](https://github.com/PowerShellMafia/PowerSploit/blob/master/Recon/PowerView.ps1)/[SharpView](https://github.com/dmchell/SharpView) | PowerShell 工具和相同的 .NET 端口用于在 AD 中获得态势感知。 这些工具可用作各种 Windows net\* 命令等的替代品。 PowerView 和 SharpView 可以帮助我们收集 BloodHound 所做的大部分数据，但需要做更多的工作才能在所有数据点之间建立有意义的关系。 这些工具非常适合检查我们可以使用一组新凭据进行哪些额外访问，针对特定用户或计算机，或查找一些“快速获胜”，例如可以通过 Kerberoasting 或 ASREPRoasting 攻击的用户 |
-| [Kerbrute](https://github.com/ropnop/kerbrute)                                                                                                | 一个用 Go 编写的工具，它使用 Kerberos 预身份验证来枚举 Active Directory 帐户、执行密码喷射和暴力破解                                                                                                                                                                                        |
 | [Impacket toolkit](https://github.com/SecureAuthCorp/impacket)                                                                                | 用 Python 编写的用于与网络协议交互的工具集合。 该工具套件包含用于枚举和攻击 Active Directory 的各种脚本                                                                                                                                                                                         |
 | [Responder](https://github.com/lgandx/Responder)                                                                                              | Responder 是一个专门用来毒化 LLMNR、NBT-NS 和 MDNS 的工具，具有许多不同的功能                                                                                                                                                                                                     |
 | [Inveigh.ps1](https://github.com/Kevin-Robertson/Inveigh/blob/master/Inveigh.ps1)                                                             | 类似于 Responder，一种用于执行各种网络欺骗和中毒攻击的 PowerShell 工具                                                                                                                                                                                                            |
@@ -60,9 +59,18 @@ description: 这是一个关于 AD 攻击中可能会使用的一些工具
 | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
 | [SharpHound](https://github.com/BloodHoundAD/BloodHound/tree/master/Collectors) | C# 数据收集器从 Active Directory 收集有关不同 AD 对象的信息，例如用户、组、计算机、ACL、GPO、用户和计算机属性、用户会话等。 该工具生成 JSON 文件，然后可以将这些文件提取到 BloodHound GUI 工具中进行分析 |
 | [BloodHound.py](https://github.com/fox-it/BloodHound.py)                        | 基于 Impacket 工具包的 Python  BloodHound 摄取器。 它支持大多数 BloodHound 收集方法，并且可以从未加入域的攻击主机运行。 可以将输出提取到 BloodHound GUI 中进行分析                 |
+| BloodHound                                                                      |                                                                                                                                 |
 
 ### ADRecon
 
 | 名称                                            | 作用                                                                           |
 | --------------------------------------------- | ---------------------------------------------------------------------------- |
 | [ADRecon](https://github.com/adrecon/ADRecon) | 用于从目标 AD 环境中提取各种数据的工具。 数据可以 Microsoft Excel 格式输出，带有摘要视图和分析，以协助分析并绘制环境整体安全状态图 |
+
+## Kerberos
+
+| 名称                                             | 介绍链接              | 作用                                                        |
+| ---------------------------------------------- | ----------------- | --------------------------------------------------------- |
+| [Kerbrute](https://github.com/ropnop/kerbrute) | [链接](kerbrute.md) | 暴力破解用户、密码、密码喷洒                                            |
+| Impacket-GetNPUsers                            | 链接                | 这个脚本会尝试获得并列出不需要Kerberos域认证(UF\_DONT\_REQUIRE\_PREAUTH)的用户 |
+
