@@ -239,6 +239,8 @@
   * [Vs-Code](编程语言/编程工具/Vs-Code.md)
   * [Jetbrains](编程语言/编程工具/Jetbrains.md)
   * [Navicat Premium 15](<编程语言/编程工具/Navicat Premium 15.md>)
+* [C/C++](bian-cheng-yu-yan/c-c++/README.md)
+  * [Linux C 一站式编程学习](https://akaedu.github.io/book/index.html)
 * [Java](编程语言/Java/README.md)
   * [资源](编程语言/Java/资源/README.md)
     * [JDK](编程语言/Java/资源/JDK.md)
@@ -253,7 +255,12 @@
   * [1.2 特殊字符](bian-cheng-yu-yan/shell-jiao-cheng/1.2-te-shu-zi-fu.md)
   * [1.3 正则表达式](bian-cheng-yu-yan/shell-jiao-cheng/1.3-zheng-ze-biao-da-shi.md)
   * [1.4 数组](bian-cheng-yu-yan/shell-jiao-cheng/1.4-shu-zu.md)
-  * [字符串](bian-cheng-yu-yan/shell-jiao-cheng/zi-fu-chuan.md)
+  * [1.5 字符串](bian-cheng-yu-yan/shell-jiao-cheng/1.5-zi-fu-chuan.md)
+  * [1.6 函数](bian-cheng-yu-yan/shell-jiao-cheng/1.6-han-shu.md)
+  * [1.7 循环判断](bian-cheng-yu-yan/shell-jiao-cheng/1.7-xun-huan-pan-duan.md)
+  * [扩展](bian-cheng-yu-yan/shell-jiao-cheng/kuo-zhan/README.md)
+    * [执行命令](bian-cheng-yu-yan/shell-jiao-cheng/kuo-zhan/zhi-hang-ming-ling.md)
+    * [子 SHELL](bian-cheng-yu-yan/shell-jiao-cheng/kuo-zhan/zi-shell.md)
 
 ## 🔧 云开发
 
