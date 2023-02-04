@@ -110,8 +110,7 @@
     * [SMTP 命令](工具/端口-服务/25-465-587-smtp-s/smtp-ming-ling.md)
     * [sendEmail](工具/端口-服务/25-465-587-smtp-s/sendemail.md)
     * [swaks](工具/端口-服务/25-465-587-smtp-s/swaks.md)
-  * [53 -- DNS](工具/端口-服务/53-dns/README.md)
-    * [dig](工具/端口-服务/53-dns/dig.md)
+  * [53 -- DNS](gong-ju/duan-kou-fu-wu/53-dns.md)
   * [80/443 -- WEB 服务](工具/端口-服务/80443-web-fu-wu/README.md)
     * [CURL](工具/端口-服务/80443-web-fu-wu/curl.md)
     * [CMS](工具/端口-服务/80443-web-fu-wu/cms/README.md)
@@ -123,8 +122,7 @@
       * [WFUZZ](工具/端口-服务/80443-web-fu-wu/sao-miao-gong-ju/wfuzz.md)
       * [gobuster](工具/端口-服务/80443-web-fu-wu/sao-miao-gong-ju/gobuster.md)
       * [FFUF](工具/端口-服务/80443-web-fu-wu/sao-miao-gong-ju/ffuf.md)
-  * [88 tcp/udp -- Kerberos](工具/端口-服务/88-tcp-udp-kerberos/README.md)
-    * [Kerbrute](工具/端口-服务/88-tcp-udp-kerberos/kerbrute.md)
+  * [88 tcp/udp -- Kerberos](gong-ju/duan-kou-fu-wu/88-tcp-udp-kerberos.md)
   * [139/445 -- SMB](工具/端口-服务/139-and-445-smb/README.md)
     * [enum4linux-ng](gong-ju/duan-kou-fu-wu/139-and-445-smb/enum4linux-ng.md)
     * [smbClient](工具/端口-服务/139-and-445-smb/smbclient.md)
@@ -176,7 +174,6 @@
   * [Git](工具/kai-fa-gong-ju/git.md)
 * [浏览器](gong-ju/liu-lan-qi/README.md)
   * [浏览器密码&历史等信息](gong-ju/liu-lan-qi/hackbrowserdata.md)
-* [搜索器语法](工具/sou-suo-qi-yu-fa.md)
 * [crackmapexec](工具/crackmapexec.md)
 * [OPENSSL](gong-ju/openssl/README.md)
   * [Heartbleed](gong-ju/openssl/heartbleed.md)
@@ -203,7 +200,6 @@
 * [SHELLS\&Payloads](<HTB 学院/SHELLS\&Payloads.md>)
 * [文件传输](<HTB 学院/文件传输.md>)
 * [足迹](<HTB 学院/足迹.md>)
-* [信息收集](<HTB 学院/信息收集.md>)
 * [Pivoting &隧道和端口转发](<HTB 学院/Pivoting &隧道和端口转发.md>)
 * [密码攻击](<HTB 学院/密码攻击.md>)
 
@@ -257,11 +253,22 @@
   * [1.2 特殊字符](bian-cheng-yu-yan/shell-jiao-cheng/1.2-te-shu-zi-fu.md)
   * [1.3 正则表达式](bian-cheng-yu-yan/shell-jiao-cheng/1.3-zheng-ze-biao-da-shi.md)
   * [1.4 数组](bian-cheng-yu-yan/shell-jiao-cheng/1.4-shu-zu.md)
+  * [字符串](bian-cheng-yu-yan/shell-jiao-cheng/zi-fu-chuan.md)
 
 ## 🔧 云开发
 
 * [🔧 Docker](yun-kai-fa/docker/README.md)
   * [🔧 Docker](yun-kai-fa/docker/docker.md)
+
+## 🔧 信息收集
+
+* [网站内容](xin-xi-shou-ji/wang-zhan-nei-rong.md)
+* [OSINT](xin-xi-shou-ji/osint.md)
+* [侦查](xin-xi-shou-ji/zhen-cha/README.md)
+  * [Shodan.io](xin-xi-shou-ji/zhen-cha/shodan.io.md)
+  * [google 语法](xin-xi-shou-ji/zhen-cha/sou-suo-qi-yu-fa.md)
+* [子域枚举](xin-xi-shou-ji/zi-yu-mei-ju/README.md)
+  * [dig](xin-xi-shou-ji/zi-yu-mei-ju/dig.md)
 
 ## 🔧 逆向
 
@@ -273,3 +280,5 @@
 * [杂章](za-zhang/za-zhang/README.md)
   * [区域传输](za-zhang/za-zhang/qu-yu-chuan-shu.md)
   * [XFF\&Referer](za-zhang/za-zhang/xff-and-referer.md)
+  * [VHOST](za-zhang/za-zhang/vhost.md)
+  * [ASN](za-zhang/za-zhang/asn.md)
