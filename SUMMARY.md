@@ -58,6 +58,7 @@
 * [🔧 Windows](计算机网络/windows/README.md)
   * [工具](网络&系统/windows/gong-ju/README.md)
     * [WSL 安装 kail](wang-luo-xi-tong/windows/gong-ju/wsl-an-zhuang-kail/README.md)
+      * [Windows 端口转发 WSL 流量](wang-luo-xi-tong/windows/gong-ju/wsl-an-zhuang-kail/windows-duan-kou-zhuan-fa-wsl-liu-liang.md)
       * [使用远程桌面连接 kali](wang-luo-xi-tong/windows/gong-ju/wsl-an-zhuang-kail/shi-yong-yuan-cheng-zhuo-mian-lian-jie-kali.md)
     * [VMware](网络&系统/windows/工具/vmware.md)
     * [WizTree](网络&系统/windows/工具/WizTree.md)
