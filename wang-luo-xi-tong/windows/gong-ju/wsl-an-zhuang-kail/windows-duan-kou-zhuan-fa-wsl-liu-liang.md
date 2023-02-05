@@ -13,4 +13,5 @@ PS C:\Users\14894> netsh interface portproxy show v4tov4
 地址            端口        地址            端口
 --------------- ----------  --------------- ----------
 10.18.4.251     8000        172.21.31.34    8000
+PS C:\WINDOWS\system32> netsh interface portproxy delete v4tov4 listenport=8000 listenaddress=10.18.4.251 //删除端口转发规则
 ```
