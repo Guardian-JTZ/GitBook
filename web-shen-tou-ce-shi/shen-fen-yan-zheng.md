@@ -42,3 +42,5 @@ Cookie: logged_in=true; admin=true
 ### 1. 逻辑缺陷&身份验证
 
 > 有时候身份验证过程包含逻辑缺陷的问题
+>
+> * 找回密码

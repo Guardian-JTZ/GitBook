@@ -206,13 +206,15 @@
 
 ## 🖥 WEB 渗透测试
 
-* [🔧 文件包含](WEB-渗透测试/文件包含/README.md)
-  * [/proc/self/envirom](WEB-渗透测试/文件包含/proc-self-envirom.md)
-* [信息泄露](WEB-渗透测试/信息泄露/README.md)
-  * [信息泄露工具](WEB-渗透测试/信息泄露/信息泄露工具.md)
-* [目录遍历](WEB-渗透测试/目录遍历.md)
 * [命令注入（RCE）](WEB-渗透测试/命令注入/README.md)
   * [🚚 资源](WEB-渗透测试/命令注入/资源.md)
+* [身份验证](web-shen-tou-ce-shi/shen-fen-yan-zheng.md)
+* [信息泄露](WEB-渗透测试/信息泄露/README.md)
+  * [信息泄露工具](WEB-渗透测试/信息泄露/信息泄露工具.md)
+* [Page 1](web-shen-tou-ce-shi/page-1.md)
+* [🔧 文件包含](WEB-渗透测试/文件包含/README.md)
+  * [/proc/self/envirom](WEB-渗透测试/文件包含/proc-self-envirom.md)
+* [目录遍历](WEB-渗透测试/目录遍历.md)
 * [SSRF](WEB-渗透测试/SSRF/README.md)
   * [资源](WEB-渗透测试/SSRF/资源.md)
 * [访问控制](WEB-渗透测试/访问控制.md)
@@ -231,7 +233,6 @@
 * [SSTI](WEB-渗透测试/SSTI/README.md)
   * [资源](WEB-渗透测试/SSTI/资源.md)
 * [WebSocket](WEB-渗透测试/WebSocket.md)
-* [身份验证](web-shen-tou-ce-shi/shen-fen-yan-zheng.md)
 * [逻辑缺陷](web-shen-tou-ce-shi/luo-ji-que-xian.md)
 
 ## 🔧 编程语言
