@@ -54,8 +54,10 @@ remote$
 
 ## 安装
 
+> 这里推荐虚拟环境安装，Python3 虚拟环境安装见 --> [链接](../../bian-cheng-yu-yan/python/zi-yuan/python-xu-ni-huan-jing.md)
+
 ```bash
-pip3 install pwncat-cs
+$ pip install pwncat-cs
 ```
 
 ```bash
