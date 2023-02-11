@@ -12,6 +12,11 @@
 * traceroute 也是基于 ICMP 协议实现的
 * 功能： 到达目标主机之前经历多少路由器
 
+## Wireshark 分析 ICMP 流量
+
+* ICMP 请求数据包 ![image-20230209085923009](https://img-blog.csdnimg.cn/5c49ace9c33b4c9ab342714df3789e09.png)
+* ICMP 回复数据包 ![image-20230209090016454](https://img-blog.csdnimg.cn/71a9c15f274f460d800ef125f75c97c2.png)
+
 ## 参考
 
 * [参考链接](https://zh.wikipedia.org/wiki/%E4%BA%92%E8%81%94%E7%BD%91%E6%8E%A7%E5%88%B6%E6%B6%88%E6%81%AF%E5%8D%8F%E8%AE%AE)

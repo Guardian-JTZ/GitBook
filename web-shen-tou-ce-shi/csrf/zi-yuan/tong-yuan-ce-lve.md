@@ -8,7 +8,7 @@
 
 在确定请求是否为同一站点时，还会考虑 URL 方案。这意味着从`http://app.example.com`到的链接`https://app.example.com`被大多数浏览器视为跨站点
 
-<figure><img src="../../.gitbook/assets/SameSite1.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/SameSite1.png" alt=""><figcaption></figcaption></figure>
 
 > 您可能会遇到术语“有效顶级域”(eTLD)。这只是一种考虑在实践中被视为顶级域的保留多部分后缀的方法，例如`.co.uk`
 
@@ -18,7 +18,7 @@
 
 如果两个 URL 共享完全相同的 scheme、域名和端口，则它们被认为具有相同的来源。尽管请注意，端口通常是从 scheme 中推断出来的
 
-<figure><img src="../../.gitbook/assets/SameSite2.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/SameSite2.png" alt=""><figcaption></figcaption></figure>
 
 从此示例中可以看出，术语“ site ”的具体性要低得多，因为它仅说明 scheme 和域名的最后一部分。至关重要的是，这意味着跨源请求仍然可以是同一站点的，但反之则不行
 
